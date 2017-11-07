@@ -123,31 +123,37 @@ The acceptable values for this field are:
 **Field Name:** `premises_postcode`  
 **Data Type:** Text (Between 5 and 8 characters)  
 **Optional:** No  
-**Comments:** The postcode of the premises where the sample was taken  
+**Comments:** The postcode of the premises where the sample was taken.  
 
 ### 9. Premises Type
 **Field Name:** `premises_type`  
-**Data Type:** Text ()  
+**Data Type:** Text (5 character maximum)  
 **Optional:** No  
-**Comments:** The premises type as defined by the [Categories of Food Establishment Register](http://data.food.gov.uk/codes/business/establishment), the notation should be provided, for example a premises designated as a take-away has the notation `RC-TA`  
+**Comments:** The premises type as defined by the [Categories of Food Establishment Register](http://data.food.gov.uk/codes/business/establishment), the notation should be provided, for example a premises designated as a take-away has the notation `RC-TA`.  
 
-### 10. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
+### 10. Sample Reason
+**Field Name:** `sample_reason`  
+**Data Type:** Text (13 character maximum)  
 **Optional:** No  
-**Comments:**  
+**Comments:** The acceptable values for this field are:
+ - Surveillance
+ - Monitoring
+ - Enforcement
+ - Investigation
 
-### 11. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
+### 11. Sample Type
+**Field Name:** `sample_type`  
+**Data Type:** Text (8 character maximum)  
 **Optional:** No  
-**Comments:**  
+**Comments:** The acceptable values for this field are:
+ - Formal
+ - Informal  
 
-### 12. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
+### 12. Follow Up
+**Field Name:** `follow_up`  
+**Data Type:** Boolean (True/False)  
 **Optional:** No  
-**Comments:**  
+**Comments:** Indicates whether a follow-up visit is required.  
 
 ### 13. Sample Number
 **Field Name:** `sample_no`  
