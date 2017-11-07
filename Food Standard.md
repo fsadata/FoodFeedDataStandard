@@ -17,3 +17,10 @@ This document is written for Local Authority and Laboratory users who need to su
 3. Additional Definitions
 4. File Types
 5. File Naming Conventions
+
+## Food Standard Overview
+
+The following table lists the fields, their data types, whether they are optional, and whether they use reference data or a controlled vocabulary.
+
+Index | Field Name | Data Type | Optional | Reference Data
+------|------------|-----------|----------|---------------
