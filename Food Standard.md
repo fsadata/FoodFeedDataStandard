@@ -82,6 +82,6 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 
 ### 2. Local Authority
 **Field Name:** `local_auth`  
-**Data Type:** `Text` (3 character Local Authority code from gov.uk register)  
+**Data Type:** Text (3 character Local Authority code from gov.uk register)  
 **Optional:** This field is not optional  
 **Comments:** Some comments, blah blah blah
