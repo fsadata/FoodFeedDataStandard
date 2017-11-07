@@ -73,3 +73,8 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 47|det_level_4|Determination Level 4|text|No|Yes
 
 ## Detailed Field Definitions
+
+### 1. Sample Number
+**Field Name:** ```sample_no```
+
+**Data Type:** String
