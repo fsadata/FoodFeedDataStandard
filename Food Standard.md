@@ -12,11 +12,11 @@ This document is written for Local Authority and Laboratory users who need to su
 
 ### How This Document Is Structured
 
-1. [Food Standard Overview](#food-standard-overview)
-2. [Detailed Field Definitions](#detailed-field-definitions)
-3. Additional Definitions
-4. File Types
-5. File Naming Conventions
+- [Food Standard Overview](#food-standard-overview)
+- [Detailed Field Definitions](#detailed-field-definitions)
+- Additional Definitions
+- File Types
+- File Naming Conventions
 
 ## Food Standard Overview
 
@@ -155,23 +155,23 @@ The acceptable values for this field are:
 **Optional:** No  
 **Comments:** Indicates whether a follow-up visit is required.  
 
-### 13. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 13. Follow Up Reference
+**Field Name:** `follow_up_ref`  
+**Data Type:** Text (32 character maximum)  
+**Optional:** Yes  
+**Comments:** The unique sample reference number for the original sample to which this is a follow up.
 
-### 14. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 14. Food Poisoning
+**Field Name:** `food_poisoning`  
+**Data Type:** Boolean (True/False)  
+**Optional:** No  
+**Comments:**  *Needs better definition*
 
-### 15. Sample Number
-**Field Name:** `sample_no`  
+### 15. Food Poisoning Details
+**Field Name:** `food_poisoning_details`  
 **Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+**Optional:** Yes  
+**Comments:** *Needs better definition* 
 
 ### 16. Sample Number
 **Field Name:** `sample_no`  
