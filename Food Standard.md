@@ -75,6 +75,7 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 ## Detailed Field Definitions
 
 ### 1. Sample Number
-**Field Name:** ```sample_no```
-
-**Data Type:** String
+**Field Name:** sample_no  
+**Data Type:** String (32 character maximum)  
+**Optional:** This field is not optional  
+**Comments:** The sample number, as recorded by the sampling body. This must be a unique value within the records of that sampling body. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
