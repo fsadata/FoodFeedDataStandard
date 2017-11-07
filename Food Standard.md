@@ -90,62 +90,63 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 **Field Name:** `local_auth_name`  
 **Data Type:** Text (50 character maximum)  
 **Optional:** Yes  
-**Comments:** **This field should be consider for removal**  
+**Comments:** **This field should be considered for removal**  
 
 ### 4. Analysis Type
 **Field Name:** `analysis_type`  
 **Data Type:** Text (Fixed values)  
-**Optional:** Yes/No  
-**Comments:** The acceptable values for this field are:
+**Optional:** Yes  
+**Comments:** **This field should be considered for removal**  
+The acceptable values for this field are:
  - Microbiological
  - Chemical
 
-### 5. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 5. Sampling Officer
+**Field Name:** `sampling_officer`  
+**Data Type:** Text (30 character maximum)  
+**Optional:** No  
+**Comments:**  **This field should be considered for removal**
 
-### 6. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 6. Sample Date
+**Field Name:** `sample_date`  
+**Data Type:** Date (YYYY-MM-DD)  
+**Optional:** No  
+**Comments:** The date the sample was taken, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.
 
-### 7. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 7. Premises Name
+**Field Name:** `premises_name`  
+**Data Type:** Text (50 character maximum)  
+**Optional:** No  
+**Comments:** The name of the premises where the sample was taken. 
 
-### 8. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 8. Premises Postcode
+**Field Name:** `premises_postcode`  
+**Data Type:** Text (Between 5 and 8 characters)  
+**Optional:** No  
+**Comments:** The postcode of the premises where the sample was taken  
 
-### 9. Sample Number
-**Field Name:** `sample_no`  
+### 9. Premises Type
+**Field Name:** `premises_type`  
 **Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+**Optional:** No  
+**Comments:** The premises type as defined by the [Categories of Food Establishment Register](http://data.food.gov.uk/codes/business/establishment), the notation should be provided, for example a premises designated as a take-away has the notation `RC-TA`  
 
 ### 10. Sample Number
 **Field Name:** `sample_no`  
 **Data Type:** Text ()  
-**Optional:** Yes/No  
+**Optional:** No  
 **Comments:**  
 
 ### 11. Sample Number
 **Field Name:** `sample_no`  
 **Data Type:** Text ()  
-**Optional:** Yes/No  
+**Optional:** No  
 **Comments:**  
 
 ### 12. Sample Number
 **Field Name:** `sample_no`  
 **Data Type:** Text ()  
-**Optional:** Yes/No  
+**Optional:** No  
 **Comments:**  
 
 ### 13. Sample Number
