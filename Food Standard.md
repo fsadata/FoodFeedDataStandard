@@ -12,7 +12,7 @@ This document is written for Local Authority and Laboratory users who need to su
 
 ### How This Document Is Structured
 
-1. [Food Standard Overview](#1.-Food-Standard-Overview)
+1. [Food Standard Overview](#1-Food-Standard-Overview)
 2. Detailed Field Definitions
 3. Additional Definitions
 4. File Types
