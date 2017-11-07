@@ -18,7 +18,7 @@ This document is written for Local Authority and Laboratory users who need to su
 4. File Types
 5. File Naming Conventions
 
-## Food Standard Overview
+## 1. Food Standard Overview
 
 The following table lists the fields, their data types, whether they are optional, and whether they use reference data or a controlled vocabulary.
 
@@ -29,7 +29,7 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 3|local_auth_name|Local Authority official name from official list|text|Yes|Yes
 4|analysis_type|Type of analysis conducted|text|Yes|Yes
 5|sampling_officer|Name of sampling officer|text|No|No
-6|sample_date|Date sample taken|yyyy-mm-dd ISO 8601|No|No
+6|sample_date|Date sample taken|date|No|No
 7|premise_name|Name of company|text|No|No
 8|premise_postcode|Post code of premises form where sample taken.|text|No|No
 9|premise_type|Premise type from LAEMS codes - Alnnex_2|text|No|Yes
@@ -56,7 +56,7 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 30|laboratory_comments|Will be examiners opinion of the sample.|text|Yes|No
 31|prosecution|Was a prosecution completed.|text|No|Yes
 32|satisfactory|Need to have labs record as yes, no borderline|text|No|Yes
-33|reported_date|Date results reported to LA|date: dd-mm-yy|No|No
+33|reported_date|Date results reported to LA|date|No|No
 34|result|Numerical value relating to outcome of test|number|No|No
 35|test_result|Text explanation of result|text|Yes|No
 36|det|Determination - looks like codes|text|Yes|No
