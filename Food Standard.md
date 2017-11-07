@@ -12,13 +12,13 @@ This document is written for Local Authority and Laboratory users who need to su
 
 ### How This Document Is Structured
 
-1. [Food Standard Overview](#1-Food-Standard-Overview)
+1. [Food Standard Overview](#Food-Standard-Overview)
 2. Detailed Field Definitions
 3. Additional Definitions
 4. File Types
 5. File Naming Conventions
 
-## 1. Food Standard Overview
+## Food Standard Overview
 
 The following table lists the fields (name and description), their data types, whether they are optional, and whether they use reference data or a controlled vocabulary.
 
