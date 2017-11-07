@@ -14,6 +14,53 @@ This document is written for Local Authority and Laboratory users who need to su
 
 - [Food Standard Overview](#food-standard-overview)
 - [Detailed Field Definitions](#detailed-field-definitions)
+ 1. Sample Number  
+ 2. Local Authority  
+ 3. Local Authority Name  
+ 4. Analysis Type  
+ 5. Sampling Officer  
+ 6. Sample Date  
+ 7. Premises Name  
+ 8. Premises Postcode  
+ 9. Premises Type  
+ 10. Sample Reason  
+ 11. Sample Type  
+ 12. Follow Up  
+ 13. Follow Up Reference  
+ 14. Food Poisoning  
+ 15. Food Poisoning Details  
+ 16. Survey  
+ 17. Survey Number  
+ 18. Brand Name  
+ 19. Food Description  
+ 20. Sample Clan  
+ 21. Sample Family  
+ 22. Sample Group  
+ 23. Sample Type  
+ 24. Product Type  
+ 25. Manufacturer  
+ 26. Distributor  
+ 27. Importer  
+ 28. Country of Origin  
+ 29. Laboratory Name  
+ 30. Laboratory Comments  
+ 31. Prosecution  
+ 32. Satisfactory  
+ 33. Reported Date  
+ 34. Result  
+ 35. Test Result  
+ 36. Determinand  
+ 37. Output  
+ 38. Result Fail Code  
+ 39. Level 1 Result  
+ 40. Level 2 Result  
+ 41. Level 3 Result  
+ 42. Determination  
+ 43. Units  
+ 44. Level 1 Determination  
+ 45. Level 2 Determination  
+ 46. Level 3 Determination  
+ 47. Level 4 Determination  
 - Additional Definitions
 - File Types
 - File Naming Conventions
