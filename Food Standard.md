@@ -12,7 +12,7 @@ This document is written for Local Authority and Laboratory users who need to su
 
 ### How This Document Is Structured
 
-1. Food Standard Overview
+1. [Food Standard Overview](#1.-Food-Standard-Overview)
 2. Detailed Field Definitions
 3. Additional Definitions
 4. File Types
@@ -20,7 +20,7 @@ This document is written for Local Authority and Laboratory users who need to su
 
 ## 1. Food Standard Overview
 
-The following table lists the fields, their data types, whether they are optional, and whether they use reference data or a controlled vocabulary.
+The following table lists the fields (name and description), their data types, whether they are optional, and whether they use reference data or a controlled vocabulary.
 
 Index | Field Name | Description | Data Type | Optional | Reference Data
 ------|------------|-------------|-----------|----------|---------------
@@ -71,3 +71,5 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 45|det_level_2|Determination Level 2|text|No|Yes
 46|det_level_3|Determination Level 3|text|No|Yes
 47|det_level_4|Determination Level 4|text|No|Yes
+
+## 2. Detailed Field Definitions
