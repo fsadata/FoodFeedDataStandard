@@ -86,17 +86,19 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 **Optional:** No  
 **Comments:** This is the three character Local Authority code as listed in the Government Digital Service (GDS) register for [England](https://local-authority-eng.register.gov.uk/), [Northern Ireland](https://local-authority-nir.discovery.openregister.org/), and [Wales](https://principal-local-authority.register.gov.uk/) repsectively. It should be noted that the Northern Ireland register is currently only in discovery, but GDS have advised us that the three character code is unlikely to change.
 
-### 3. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 3. Local Authority Name
+**Field Name:** `local_auth_name`  
+**Data Type:** Text (50 character maximum)  
+**Optional:** Yes  
+**Comments:** **This field should be consider for removal**  
 
-### 4. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
+### 4. Analysis Type
+**Field Name:** `analysis_type`  
+**Data Type:** Text (Fixed values)  
 **Optional:** Yes/No  
-**Comments:**  
+**Comments:** The acceptable values for this field are:
+ - Microbiological
+ - Chemical
 
 ### 5. Sample Number
 **Field Name:** `sample_no`  
