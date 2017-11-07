@@ -13,7 +13,7 @@ This document is written for Local Authority and Laboratory users who need to su
 ### How This Document Is Structured
 
 1. [Food Standard Overview](#Food-Standard-Overview)
-2. Detailed Field Definitions
+2. [Detailed Field Definitions](#Detailed-Field-Definitions)
 3. Additional Definitions
 4. File Types
 5. File Naming Conventions
@@ -72,4 +72,4 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 46|det_level_3|Determination Level 3|text|No|Yes
 47|det_level_4|Determination Level 4|text|No|Yes
 
-## 2. Detailed Field Definitions
+## Detailed Field Definitions
