@@ -24,7 +24,7 @@ The following table lists the fields (name and description), their data types, w
 
 Index | Field Name | Description | Data Type | Optional | Reference Data
 ------|------------|-------------|-----------|----------|---------------
-1|sample_no|sample unique identifying number|string|No|No
+1|sample_no|sample unique identifying number|Text|No|No
 2|local_auth|Local Authority code from official list|text|No|Yes
 3|local_auth_name|Local Authority official name from official list|text|Yes|Yes
 4|analysis_type|Type of analysis conducted|text|Yes|Yes
@@ -76,6 +76,12 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 
 ### 1. Sample Number
 **Field Name:** sample_no  
-**Data Type:** String (32 character maximum)  
+**Data Type:** Text (32 character maximum)  
 **Optional:** This field is not optional  
 **Comments:** The sample number, as recorded by the sampling body. This must be a unique value within the records of that sampling body. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
+
+### 2. Local Authority
+**Field Name:** `local_auth`  
+**Data Type:** `Text` (3 character Local Authority code from gov.uk register)  
+**Optional:** This field is not optional  
+**Comments:** Some comments, blah blah blah
