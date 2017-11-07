@@ -75,13 +75,13 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 ## Detailed Field Definitions
 
 ### 1. Sample Number
-**Field Name:** sample_no  
+**Field Name:** `sample_no`  
 **Data Type:** Text (32 character maximum)  
 **Optional:** This field is not optional  
 **Comments:** The sample number, as recorded by the sampling body. This must be a unique value within the records of that sampling body. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
 
 ### 2. Local Authority
 **Field Name:** `local_auth`  
-**Data Type:** Text (3 character Local Authority code from gov.uk register)  
+**Data Type:** Text (3 character Local Authority code)  
 **Optional:** This field is not optional  
-**Comments:** Some comments, blah blah blah
+**Comments:** This is the three character Local Authority code as listed in the Government Digital Service (GDS) register for [England](https://local-authority-eng.register.gov.uk/), [Northern Ireland](https://local-authority-nir.discovery.openregister.org/), and [Wales](https://principal-local-authority.register.gov.uk/) repsectively. It should be noted that the Northern Ireland register is currently only in discovery, but GDS have advised us that the three character code is unlikely to change.
