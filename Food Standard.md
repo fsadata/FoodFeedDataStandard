@@ -12,8 +12,8 @@ This document is written for Local Authority and Laboratory users who need to su
 
 ### How This Document Is Structured
 
-1. [Food Standard Overview](#Food-Standard-Overview)
-2. [Detailed Field Definitions](#Detailed-Field-Definitions)
+1. [Food Standard Overview](#food-standard-overview)
+2. [Detailed Field Definitions](#detailed-field-definitions)
 3. Additional Definitions
 4. File Types
 5. File Naming Conventions
