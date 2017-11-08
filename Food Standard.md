@@ -141,12 +141,12 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 
 ### 4. Analysis Type
 **Field Name:** `analysis_type`  
-**Data Type:** Text (Fixed values)  
+**Data Type:** Text (controlled vocabulary)  
 **Optional:** Yes  
 **Comments:** **This field should be considered for removal**  
 The acceptable values for this field are:
- - Microbiological
- - Chemical
+ - "Microbiological" or "M"
+ - Chemical or "C"
 
 ### 5. Sampling Officer
 **Field Name:** `sampling_officer`  
@@ -180,17 +180,17 @@ The acceptable values for this field are:
 
 ### 10. Sample Reason
 **Field Name:** `sample_reason`  
-**Data Type:** Text (13 character maximum)  
+**Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Comments:** The acceptable values for this field are:
- - Surveillance
- - Monitoring
- - Enforcement
- - Investigation
+ - `Surveillance` or `S`
+ - `Monitoring` or `M`
+ - `Enforcement` or `E`
+ - `Investigation` or `I`
 
 ### 11. Sample Type
 **Field Name:** `sample_type`  
-**Data Type:** Text (8 character maximum)  
+**Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Comments:** The acceptable values for this field are:
  - Formal
@@ -218,49 +218,49 @@ The acceptable values for this field are:
 **Field Name:** `food_poisoning_details`  
 **Data Type:** Text ()  
 **Optional:** Yes  
-**Comments:** *Needs better definition* 
+**Comments:** *Needs better definition*
 
-### 16. Sample Number
-**Field Name:** `sample_no`  
+### 16. Survey
+**Field Name:** `survey`  
+**Data Type:** Boolean (True/False)  
+**Optional:** No  
+**Comments:** *This field should not be necessary as can be handled by assessing whether sruvey number field is present or null*  
+
+### 17. Survey Number
+**Field Name:** `survey_number`  
+**Data Type:** Text ()  
+**Optional:** Yes  
+**Comments:** A unique reference to identify the survey under which this sample was taken.  
+
+### 18. Brand Name
+**Field Name:** `brand_name`  
+**Data Type:** Text (50 character maximum)  
+**Optional:** No  
+**Comments:** The brand name of the product being sampled (where appropriate).
+
+### 19. Food Description
+**Field Name:** `food_description`  
+**Data Type:** Text (255 character maximum)  
+**Optional:** Yes  
+**Comments:** A free text description of the food being sampled. *This field should not be necessary, and will only reduce overall data quality*  
+
+### 20. Sample Category
+**Field Name:** `sample_category`  
+**Data Type:** Text (11 characters format: `00.00.00.00`)  
+**Optional:** No  
+**Comments:** The [sampling taxonomy](http://data.food.gov.uk/codes/enforcement-monitoring/sampling) defines the acceptable values for this field. The sample taxonomy is a hierarchy of sampling classification with four levels. They are organised as `Clan > Family > Group > Type`. Each item in each level is numbered, these values are concatenated into a single string with a `.` used to separate them. Because they have a strict hierarchical relationship the classification only needs to be reported at the type level (format `00.00.00.00`), the group, family and clan do not need to be supplied.  
+
+### 21. Food Sub Category
+**Field Name:** `food_sub_cat`  
 **Data Type:** Text ()  
 **Optional:** Yes/No  
-**Comments:**  
+**Comments: TO BE DEPRECATED**  
 
-### 17. Sample Number
-**Field Name:** `sample_no`  
+### 22. Food Sub Sub Category
+**Field Name:** `food_sub_sub_cat`  
 **Data Type:** Text ()  
 **Optional:** Yes/No  
-**Comments:**  
-
-### 18. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 19. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 20. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 21. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 22. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+**Comments: TO BE DEPRECATED**  
 
 ### 23. Sample Number
 **Field Name:** `sample_no`  
@@ -268,10 +268,10 @@ The acceptable values for this field are:
 **Optional:** Yes/No  
 **Comments:**  
 
-### 24. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
+### 24. Product Type
+**Field Name:** `prod_type`  
+**Data Type:** Text (controlled vocabulary)  
+**Optional:** No  
 **Comments:**  
 
 ### 25. Sample Number
