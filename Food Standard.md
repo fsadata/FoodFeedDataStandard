@@ -14,52 +14,41 @@ This document is written for Local Authority and Laboratory users who need to su
 
 - [Food Standard Overview](#food-standard-overview)
 - [Detailed Field Definitions](#detailed-field-definitions)
- 1. Sample Number  
- 2. Local Authority  
- 4. Analysis Type  
- 5. Sampling Officer  
- 6. Sample Date  
+ 1. Local Authority  
+ 2. Sample Identifier  
+ 3. Sample Date  
+ 4. Sample Category  
+ 5. Brand Name  
+ 6. Food Description  
  7. Premises Name  
  8. Premises Postcode  
  9. Premises Type  
  10. Sample Reason  
  11. Sample Type  
- 12. Follow Up  
- 13. Follow Up Reference  
+ 12. Follow Up Required  
+ 13. Follow Up Identifier  
  14. Food Poisoning  
  15. Food Poisoning Details  
- 16. Survey  
- 17. Survey Number  
- 18. Brand Name  
- 19. Food Description  
- 20. Sample Clan  
- 21. Sample Family  
- 22. Sample Group  
- 23. Sample Type  
- 24. Product Type  
- 25. Manufacturer  
- 26. Distributor  
- 27. Importer  
- 28. Country of Origin  
- 29. Laboratory Name  
- 30. Laboratory Comments  
- 31. Prosecution  
- 32. Satisfactory  
- 33. Reported Date  
- 34. Result  
- 35. Test Result  
- 36. Determinand  
- 37. Output  
- 38. Result Fail Code  
- 39. Level 1 Result  
- 40. Level 2 Result  
- 41. Level 3 Result  
- 42. Determination  
- 43. Units  
- 44. Level 1 Determination  
- 45. Level 2 Determination  
- 46. Level 3 Determination  
- 47. Level 4 Determination  
+ 16. Survey Reference Number  
+ 17. Product Type  
+ 18. Manufacturer Name  
+ 19. Distributor Name  
+ 20. Importer Name  
+ 21. Country of Origin  
+ 22. Laboratory  
+ 23. Laboratory Comments  
+ 24. Determinand  
+ 25. Result (Numeric)  
+ 26. Resut (Text)  
+ 27. Satisfactory  
+ 28. Reported Date  
+ 29. Prosecution  
+ 30. Output  
+ 31. Result Fail Code  
+ 32. Result Level 1  
+ 33. Result Level 2  
+ 34. Result Level 3  
+ 35. Determination  
 - Additional Definitions
 - File Types
 - File Naming Conventions
@@ -75,18 +64,18 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 3|sample_date|Date sample taken|Date|No|No
 4|sample_category|Sample category reference|Text|No|Yes
 5|brand_name|Brand name|Text|No|No
-6|food_description|REVIEW Free text food description|Text|Yes|No
+6|food_description|**REVIEW** Free text food description|Text|Yes|No
 7|premises_name|Name of the premises where the sample was taken|Text|No|No
 8|premises_postcode|Post code of the premises where the sample was taken|Text|No|No
 9|premises_type|Premises type reference|Text|No|Yes
 10|sample_reason|The reason for sampling|Text|No|Yes
 11|sample_type|The type of sample|Text|No|Yes
-12|follow_up|DEFINE Follow up visit required|Boolean|No|Yes
-13|follow_up_id|DEFINE Original sample unique identifier|Number|Yes|No
-14|food_poisoning|REVIEW Food poisoning result|Text|No|Yes
-15|food_poisoning_details|REVIEW Test details of food poisoning|Text|Yes|No
+12|follow_up|**DEFINE** Follow up visit required|Boolean|No|Yes
+13|follow_up_id|**DEFINE** Original sample unique identifier|Number|Yes|No
+14|food_poisoning|**REVIEW** Food poisoning result|Text|No|Yes
+15|food_poisoning_details|**REVIEW** Test details of food poisoning|Text|Yes|No
 16|survey_number|Survey unique identifier|Number|Yes|No
-17|product_type|REVIEW Product type|Text|No|Yes
+17|product_type|**REVIEW** Product type|Text|No|Yes
 18|manufacturer|Name of the manufacturer|Text|Yes|No
 19|distributor|Name of the distributor|Text|Yes|No
 20|importer|Name of the importer|Text|Yes|No
@@ -99,12 +88,12 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 27|satisfactory|Shows if sample was satisfactory|Text|No|Yes
 28|reported_date|Date results were reported to the Local Authority|Date|No|No
 29|prosecution|Does the sample form part of a prosecution|Boolean|No|Yes
-30|output|REVIEW Test fields, not sure of value|Text|Yes|No
-31|result_fail_code|REVIEW Codes relating to result level 1|Text|Yes|No
-32|result_level_1|REVIEW Description of results at top level|Text|Yes|Yes
-33|result_level_2|REVIEW Description of results at next level|Text|Yes|Yes
-34|result_level_3|REVIEW Summary description of test result|Text|Yes|Yes
-35|determination|REVIEW Result of test, chemical found.|No|Yes|1
+30|output|**REVIEW** Test fields, not sure of value|Text|Yes|No
+31|result_fail_code|**REVIEW** Codes relating to result level 1|Text|Yes|No
+32|result_level_1|**REVIEW** Description of results at top level|Text|Yes|Yes
+33|result_level_2|**REVIEW** Description of results at next level|Text|Yes|Yes
+34|result_level_3|**REVIEW** Summary description of test result|Text|Yes|Yes
+35|determination|**REVIEW** Result of test, chemical found.|No|Yes|1
 
 ## Detailed Field Definitions
 
