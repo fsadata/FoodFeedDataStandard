@@ -16,7 +16,6 @@ This document is written for Local Authority and Laboratory users who need to su
 - [Detailed Field Definitions](#detailed-field-definitions)
  1. Sample Number  
  2. Local Authority  
- 3. Local Authority Name  
  4. Analysis Type  
  5. Sampling Officer  
  6. Sample Date  
@@ -71,53 +70,41 @@ The following table lists the fields (name and description), their data types, w
 
 Index | Field Name | Description | Data Type | Optional | Reference Data
 ------|------------|-------------|-----------|----------|---------------
-1|sample_no|sample unique identifying number|Text|No|No
-2|local_auth|Local Authority code from official list|text|No|Yes
-3|local_auth_name|Local Authority official name from official list|text|Yes|Yes
-4|analysis_type|Type of analysis conducted|text|Yes|Yes
-5|sampling_officer|Name of sampling officer|text|No|No
-6|sample_date|Date sample taken|date|No|No
-7|premise_name|Name of company|text|No|No
-8|premise_postcode|Post code of premises form where sample taken.|text|No|No
-9|premise_type|Premise type from LAEMS codes - Alnnex_2|text|No|Yes
-10|sample_reason|Will be surveillance or monitoring|text|No|Yes
-11|sample_type|Type of sample|text|No|Yes
-12|follow_up|Follow up visit required|text|No|Yes
-13|follow_up_ref|Sample unique identifying number|numerical|Yes|No
-14|food_poisoning|Food poisoning result|text|No|Yes
-15|food_poisoning_details|Test details of food poisoning|text|Yes|No
-16|survey|Was a survey completed.|text|No|Yes
-17|survey_number|Survey unique identifying number|numerical|Yes|No
-18|brand_name|Free text field for Brand|text|No|No
-19|food_description|Free text field for food description|text|Yes|No
-20|food_category|Food Category reference data from category decision tree document|text|No|Yes
-21|food_sub_cat|As above|text|No|Yes
-22|food_sub_sub_cat|As above|text|No|Yes
-23|food_sub_sub_sub_cat|As above|text|No|Yes
-24|product_type|Product type from set list.|text|No|Yes
-25|manufacturer|Manufacturer business|text|Yes|No
-26|distributor|Distributer business|text|Yes|No
-27|importer|Name of the importer|text|Yes|No
-28|country|Country of origin|text|Yes|Yes
-29|laboratory_name|Name of Lab that completed the sample.|text|No|Yes
-30|laboratory_comments|Will be examiners opinion of the sample.|text|Yes|No
-31|prosecution|Was a prosecution completed.|text|No|Yes
-32|satisfactory|Need to have labs record as yes, no borderline|text|No|Yes
-33|reported_date|Date results reported to LA|date|No|No
-34|result|Numerical value relating to outcome of test|number|No|No
-35|test_result|Text explanation of result|text|Yes|No
-36|det|Determination - looks like codes|text|Yes|No
-37|output|Test fields, not sure of value|text|Yes|No
-38|result_fail_code|Codes relating to result level 1|text|Yes|No
-39|result_level_1|Description of results at top level|text|Yes|Yes
-40|result_level_2|Description of results at next level|text|Yes|Yes
-41|result_level_3|Summary description of test result|text|Yes|Yes
-42|determination|Result of test, chemical found.|text|No|Yes
-43|units|Measurement of results|test|No|Yes
-44|det_level_1|Determination Level 1|text|No|Yes
-45|det_level_2|Determination Level 2|text|No|Yes
-46|det_level_3|Determination Level 3|text|No|Yes
-47|det_level_4|Determination Level 4|text|No|Yes
+1|local_authority|Local Authority identifier|Text|No|Yes
+2|sample_id|Sample unique identifier|Text|No|No
+3|sample_date|Date sample taken|Date|No|No
+4|sample_category|Sample category reference|Text|No|Yes
+5|brand_name|Brand name|Text|No|No
+6|food_description|REVIEW Free text food description|Text|Yes|No
+7|premises_name|Name of the premises where the sample was taken|Text|No|No
+8|premises_postcode|Post code of the premises where the sample was taken|Text|No|No
+9|premises_type|Premises type reference|Text|No|Yes
+10|sample_reason|The reason for sampling|Text|No|Yes
+11|sample_type|The type of sample|Text|No|Yes
+12|follow_up|DEFINE Follow up visit required|Boolean|No|Yes
+13|follow_up_id|DEFINE Original sample unique identifier|Number|Yes|No
+14|food_poisoning|REVIEW Food poisoning result|Text|No|Yes
+15|food_poisoning_details|REVIEW Test details of food poisoning|Text|Yes|No
+16|survey_number|Survey unique identifier|Number|Yes|No
+17|product_type|REVIEW Product type|Text|No|Yes
+18|manufacturer|Name of the manufacturer|Text|Yes|No
+19|distributor|Name of the distributor|Text|Yes|No
+20|importer|Name of the importer|Text|Yes|No
+21|country|Country of origin|Text|Yes|Yes
+22|laboratory|Laboratory identifier|Text|No|Yes
+23|laboratory_comments|Examiner's opinion of the sample|Text|Yes|No
+24|determinand|Determinand identifier|Text|Yes|Yes
+25|result_numeric|Numerical value outcome of test|Number|No|No
+26|result_text|Text explanation of outcome of test|Text|Yes|No
+27|satisfactory|Shows if sample was satisfactory|Text|No|Yes
+28|reported_date|Date results were reported to the Local Authority|Date|No|No
+29|prosecution|Does the sample form part of a prosecution|Boolean|No|Yes
+30|output|REVIEW Test fields, not sure of value|Text|Yes|No
+31|result_fail_code|REVIEW Codes relating to result level 1|Text|Yes|No
+32|result_level_1|REVIEW Description of results at top level|Text|Yes|Yes
+33|result_level_2|REVIEW Description of results at next level|Text|Yes|Yes
+34|result_level_3|REVIEW Summary description of test result|Text|Yes|Yes
+35|determination|REVIEW Result of test, chemical found.|No|Yes|1
 
 ## Detailed Field Definitions
 
@@ -194,7 +181,7 @@ The acceptable values for this field are:
 **Field Name:** `follow_up`  
 **Data Type:** Boolean (True/False)  
 **Optional:** No  
-**Comments:** Indicates whether this sample was taken during a follow-up visit.  
+**Comments:** Indicates whether this sample was taken during a follow-up visit. **This isn't entirely clear, could be to indicate a follow up is required -- DECISION NEEDED**  
 
 ### 13. Follow Up Reference
 **Field Name:** `follow_up_ref`  
@@ -317,19 +304,19 @@ The acceptable values for this field are:
 **Field Name:** `determinand`  
 **Data Type:** Text (from register)  
 **Optional:** Yes  
-**Comments:** Describes the exact test completed on the sample. The [determinands taxonomy](www.data.food.gov.uk/codes) contains this information. It is heirarchical and has four levels. Only the most detailed level should be used.  
+**Comments:** Describes the exact test completed on the sample. The [determinands taxonomy](www.data.food.gov.uk/codes) contains this information. It is heirarchical and has four levels. Only the most detailed level should be used. For example, the test for Tartrazine assessed on a miligrams per kilogram basis has the notation `CE102-05`. 
 
-### 35. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 35. Result (Numeric)
+**Field Name:** `result_numeric`  
+**Data Type:** Number (any valid numeric data type)  
+**Optional:** Yes  
+**Comments:** The result of the test completed on the sample, where the result is numerical, e.g. `1.4`  
 
-### 36. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 36. Result (Text)
+**Field Name:** `result_text`  
+**Data Type:** Text (255 character maxmium)  
+**Optional:** Yes  
+**Comments:** The result of the test completed on the sample, where the result cannot be adequately expressed numerically, e.g. `< 1.4` or `less than one`  
 
 ### 37. Sample Number
 **Field Name:** `sample_no`  
