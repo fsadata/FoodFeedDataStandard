@@ -97,7 +97,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary
 
 ## Detailed Field Definitions
 
-### 1. Local Authority
+### Local Authority
 **Field Name:** `local_authority`  
 **Data Type:** Text (from register)  
 **Optional:** No  
