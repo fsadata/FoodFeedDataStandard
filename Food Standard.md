@@ -38,7 +38,7 @@ This document is written for Local Authority and Laboratory users who need to su
  22. [Laboratory](#laboratory)  
  23. [Laboratory Comments](#laboratory-comments)  
  24. [Determinand](#determinand)  
- 25. [Result (Numeric)](#result-(numeric))  
+ 25. [Result (Numeric)](#result-numeric)  
  26. Resut (Text)  
  27. Satisfactory  
  28. Reported Date  
