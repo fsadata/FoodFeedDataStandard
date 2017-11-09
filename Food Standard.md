@@ -18,7 +18,7 @@ This document is written for Local Authority and Laboratory users who need to su
  2. [Sample Date](#sample-date)  
  3. [Sample Identifier](#sample-identifier)  
  4. [Sample Category](#sample-identifier)  
- 5. [Brand Name](#brand-name)  
+ 5. [Brand Name](#5.-brand-name)  
  6. [Food Description](#food-description)  
  7. [Premises Name](#premises-name)  
  8. [Premises Postcode](#premises-postcode)  
