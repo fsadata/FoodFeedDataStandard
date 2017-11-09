@@ -15,8 +15,8 @@ This document is written for Local Authority and Laboratory users who need to su
 - [Food Standard Overview](#food-standard-overview)
 - [Detailed Field Definitions](#detailed-field-definitions)
  1. Local Authority  
- 2. Sample Identifier  
- 3. Sample Date  
+ 2. Sample Date  
+ 3. Sample Identifier  
  4. Sample Category  
  5. Brand Name  
  6. Food Description  
@@ -29,7 +29,7 @@ This document is written for Local Authority and Laboratory users who need to su
  13. Follow Up Identifier  
  14. Food Poisoning  
  15. Food Poisoning Details  
- 16. Survey Reference Number  
+ 16. Survey Identifier  
  17. Product Type  
  18. Manufacturer Name  
  19. Distributor Name  
@@ -55,13 +55,13 @@ This document is written for Local Authority and Laboratory users who need to su
 
 ## Food Standard Overview
 
-The following table lists the fields (name and description), their data types, whether they are optional, and whether they use reference data or a controlled vocabulary.
+The following table lists the fields (name and description), their data types, whether they are optional, and whether they use a controlled vocabulary.
 
-Index | Field Name | Description | Data Type | Optional | Reference Data
-------|------------|-------------|-----------|----------|---------------
+Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary
+------|------------|-------------|-----------|----------|----------------------
 1|local_authority|Local Authority identifier|Text|No|Yes
-2|sample_id|Sample unique identifier|Text|No|No
-3|sample_date|Date sample taken|Date|No|No
+2|sample_date|Date sample taken|Date|No|No
+3|sample_id|Sample unique identifier|Text|No|No
 4|sample_category|Sample category reference|Text|No|Yes
 5|brand_name|Brand name|Text|No|No
 6|food_description|**REVIEW** Free text food description|Text|Yes|No
@@ -74,7 +74,7 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 13|follow_up_id|**DEFINE** Original sample unique identifier|Number|Yes|No
 14|food_poisoning|**REVIEW** Food poisoning result|Text|No|Yes
 15|food_poisoning_details|**REVIEW** Test details of food poisoning|Text|Yes|No
-16|survey_number|Survey unique identifier|Number|Yes|No
+16|survey_id|Survey unique identifier|Number|Yes|No
 17|product_type|**REVIEW** Product type|Text|No|Yes
 18|manufacturer|Name of the manufacturer|Text|Yes|No
 19|distributor|Name of the distributor|Text|Yes|No
@@ -97,38 +97,41 @@ Index | Field Name | Description | Data Type | Optional | Reference Data
 
 ## Detailed Field Definitions
 
-### 1. Sample Identifier
-**Field Name:** `sample_id`  
-**Data Type:** Text (32 character maximum)  
-**Optional:** No  
-**Comments:** The sample number, as recorded by the sampling body. This must be a unique value within the records of that sampling body. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
-
-### 2. Local Authority
+### 1. Local Authority
 **Field Name:** `local_authority`  
 **Data Type:** Text (from register)  
 **Optional:** No  
 **Comments:** This is the three character Local Authority code as listed in the Government Digital Service (GDS) register for [England](https://local-authority-eng.register.gov.uk/), [Northern Ireland](https://local-authority-nir.discovery.openregister.org/), and [Wales](https://principal-local-authority.register.gov.uk/) repsectively. It should be noted that the Northern Ireland register is currently only in discovery, but GDS have advised us that the three character code is unlikely to change.
 
-### 4. Analysis Type
-**Field Name:** `analysis_type`  
-**Data Type:** Text (controlled vocabulary)  
-**Optional:** Yes  
-**Comments:** **This field is being considered for deprecation as the determinand field also describes what the tests are for. A sample can also be subject to multiple tests.**  
-The acceptable values for this field are:
- - `Microbiological` or `M`
- - `Chemical` or `C`
-
-### 5. Sampling Officer
-**Field Name:** `sampling_officer`  
-**Data Type:** Text (30 character maximum)  
-**Optional:** No  
-**Comments:**  **This field should be considered for removal**
-
-### 6. Sample Date
+### 2. Sample Date
 **Field Name:** `sample_date`  
 **Data Type:** Date (YYYY-MM-DD)  
 **Optional:** No  
 **Comments:** The date the sample was taken, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.
+
+### 3. Sample Identifier
+**Field Name:** `sample_id`  
+**Data Type:** Text (32 character maximum)  
+**Optional:** No  
+**Comments:** The sample number, as recorded by the sampling body. This must be a unique value within the records of that sampling body. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
+
+### 4. Sample Category
+**Field Name:** `sample_category`  
+**Data Type:** Text (from register, format: `00.00.00.00`)  
+**Optional:** No  
+**Comments:** The [sampling taxonomy](http://data.food.gov.uk/codes/enforcement-monitoring/sampling) defines the acceptable values for this field. The sample taxonomy is a hierarchy of sampling classification with four levels. They are organised as `Clan > Family > Group > Type`. Each item in each level is numbered, these values are concatenated into a single string with a `.` used to separate them. Because they have a strict hierarchical relationship the classification only needs to be reported at the type level (format `00.00.00.00`), the group, family and clan do not need to be supplied.  
+
+### 5. Brand Name
+**Field Name:** `brand_name`  
+**Data Type:** Text (50 character maximum)  
+**Optional:** No  
+**Comments:** The brand name of the product being sampled (where appropriate). Samples that do not have a brand name should be recorded as `N/A`  
+
+### 6. Food Description
+**Field Name:** `food_description`  
+**Data Type:** Text (255 character maximum)  
+**Optional:** Yes  
+**Comments:** A free text description of the food being sampled. *This field may not be necessary, and may reduce overall data quality*  
 
 ### 7. Premises Name
 **Field Name:** `premises_name`  
@@ -173,7 +176,7 @@ The acceptable values for this field are:
 **Comments:** Indicates whether this sample was taken during a follow-up visit. **This isn't entirely clear, could be to indicate a follow up is required -- DECISION NEEDED**  
 
 ### 13. Follow Up Reference
-**Field Name:** `follow_up_ref`  
+**Field Name:** `follow_up_id`  
 **Data Type:** Text (32 character maximum)  
 **Optional:** Yes  
 **Comments:** The unique sample reference number for the original sample to which this is a follow up.
@@ -190,37 +193,13 @@ The acceptable values for this field are:
 **Optional:** Yes  
 **Comments:** *Needs better definition*
 
-### 16. Survey
-**Field Name:** `survey`  
-**Data Type:** Boolean (True/False)  
-**Optional:** No  
-**Comments:** *This field should not be necessary as can be handled by assessing whether sruvey number field is present or null*  
-
-### 17. Survey Number
-**Field Name:** `survey_number`  
+### 16. Survey Identifier
+**Field Name:** `survey_id`  
 **Data Type:** Text ()  
 **Optional:** Yes  
 **Comments:** A unique reference to identify the survey under which this sample was taken. An entry in the fields indicates that this sample was taken as part of a survey, a null entry indicates that it was not.  
 
-### 18. Brand Name
-**Field Name:** `brand_name`  
-**Data Type:** Text (50 character maximum)  
-**Optional:** No  
-**Comments:** The brand name of the product being sampled (where appropriate). Samples that do not have a brand name should be recorded as `N/A`  
-
-### 19. Food Description
-**Field Name:** `food_description`  
-**Data Type:** Text (255 character maximum)  
-**Optional:** Yes  
-**Comments:** A free text description of the food being sampled. *This field may not be necessary, and may reduce overall data quality*  
-
-### 20. Sample Type
-**Field Name:** `sample_type`  
-**Data Type:** Text (from register, format: `00.00.00.00`)  
-**Optional:** No  
-**Comments:** The [sampling taxonomy](http://data.food.gov.uk/codes/enforcement-monitoring/sampling) defines the acceptable values for this field. The sample taxonomy is a hierarchy of sampling classification with four levels. They are organised as `Clan > Family > Group > Type`. Each item in each level is numbered, these values are concatenated into a single string with a `.` used to separate them. Because they have a strict hierarchical relationship the classification only needs to be reported at the type level (format `00.00.00.00`), the group, family and clan do not need to be supplied.  
-
-### 24. Product Type
+### 17. Product Type
 **Field Name:** `product_type`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
@@ -232,49 +211,61 @@ The acceptable values for this field are:
  - `Non-food` or `N`
  - `Processed` or `P` 
 
-### 25. Manufacturer
+### 18. Manufacturer Name
 **Field Name:** `manufacturer`  
 **Data Type:** Text ()  
 **Optional:** Yes  
 **Comments:** The name of the manufacturer of the sampled product.  
 
-### 26. Distributor
+### 19. Distributor Name
 **Field Name:** `distributor`  
 **Data Type:** Text ()  
 **Optional:** Yes  
 **Comments:** The name of the distributor of the sampled product.  
 
-### 27. Importer
+### 20. Importer Name
 **Field Name:** `importer`  
 **Data Type:** Text ()  
 **Optional:** Yes  
 **Comments:** The name of the importer of the sampled product.  
 
-### 28. Country of Origin
+### 21 Country of Origin
 **Field Name:** `country`  
 **Data Type:** Text ()  
 **Optional:** Yes  
 **Comments:** The country of origin. The field `country` from the [GDS Country Register](https://country.register.gov.uk/records) must be used. This is a two character ISO 3166 alpha 2 code.  
 
-### 29. Laboratory Name
-**Field Name:** `lab_name`  
+### 22. Laboratory
+**Field Name:** `laboratory`  
 **Data Type:** Text ()  
 **Optional:** No  
-**Comments:** The name of the laboratory completing the testing on the sample. The notation for each lab will be published in due course. In the interim period a plain text name should be used.  
+**Comments:** The name of the laboratory completing the testing on the sample. The notation for each lab will be published in due course. In the interim period a plain text name can be used.  
 
-### 30. Laboratory Comments
+### 23. Laboratory Comments
 **Field Name:** `lab_comments`  
 **Data Type:** Text (2000 character maximum)  
 **Optional:** Yes  
 **Comments:** This free text field shows the examiners opinion of the sample.  
 
-### 31. Prosecution
-**Field Name:** `prosecution`  
-**Data Type:** Boolean (True/False)  
-**Optional:** No  
-**Comments:** Indicates whether the sample forms part of a prosecution. It is critical to get this field correct as it will make sure that those samples involved in prosecutions are not published.  
+### 24. Determinand
+**Field Name:** `determinand`  
+**Data Type:** Text (from register)  
+**Optional:** Yes  
+**Comments:** Describes the exact test completed on the sample. The [determinands taxonomy](www.data.food.gov.uk/codes) contains this information. It is heirarchical and has four levels. Only the most detailed level should be used. For example, the test for Tartrazine assessed on a miligrams per kilogram basis has the notation `CE102-05`.  
 
-### 32. Satisfactory
+### 25. Result (Numeric)
+**Field Name:** `result_numeric`  
+**Data Type:** Number (any valid numeric data type)  
+**Optional:** Yes  
+**Comments:** The result of the test completed on the sample, where the result is numerical, e.g. `1.4`  
+
+### 26. Result (Text)
+**Field Name:** `result_text`  
+**Data Type:** Text (255 character limit)  
+**Optional:** Yes  
+**Comments:** The result of the test completed on the sample, where the result cannot be expressed numerically, e.g. `<1.4` or `less than one`  
+
+### 27. Satisfactory
 **Field Name:** `satisfactory`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
@@ -283,92 +274,14 @@ The acceptable values for this field are:
  - `Unsatisfactory` or `U`
  - `Borderline` or `B`  
 
-### 33. Report Date
+### 33. Reported Date
 **Field Name:** `report_date`  
 **Data Type:** Date (YYYY-MM-DD)  
 **Optional:** No  
 **Comments:** The date the results were reported, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.  
 
-### 34. Determinand
-**Field Name:** `determinand`  
-**Data Type:** Text (from register)  
-**Optional:** Yes  
-**Comments:** Describes the exact test completed on the sample. The [determinands taxonomy](www.data.food.gov.uk/codes) contains this information. It is heirarchical and has four levels. Only the most detailed level should be used. For example, the test for Tartrazine assessed on a miligrams per kilogram basis has the notation `CE102-05`. 
-
-### 35. Result (Numeric)
-**Field Name:** `result_numeric`  
-**Data Type:** Number (any valid numeric data type)  
-**Optional:** Yes  
-**Comments:** The result of the test completed on the sample, where the result is numerical, e.g. `1.4`  
-
-### 36. Result (Text)
-**Field Name:** `result_text`  
-**Data Type:** Text (255 character maxmium)  
-**Optional:** Yes  
-**Comments:** The result of the test completed on the sample, where the result cannot be adequately expressed numerically, e.g. `< 1.4` or `less than one`  
-
-### 37. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 38. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 39. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 40. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 41. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 42. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 43. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 44. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 45. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 46. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
-
-### 47. Sample Number
-**Field Name:** `sample_no`  
-**Data Type:** Text ()  
-**Optional:** Yes/No  
-**Comments:**  
+### 31. Prosecution
+**Field Name:** `prosecution`  
+**Data Type:** Boolean (True/False)  
+**Optional:** No  
+**Comments:** Indicates whether the sample forms part of a prosecution. It is critical to get this field correct as it will make sure that those samples involved in prosecutions are not published.  
