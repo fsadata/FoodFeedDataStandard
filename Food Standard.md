@@ -14,31 +14,31 @@ This document is written for Local Authority and Laboratory users who need to su
 
 - [Food Standard Overview](#food-standard-overview)
 - [Detailed Field Definitions](#detailed-field-definitions)
- 1. Local Authority  
- 2. Sample Date  
- 3. Sample Identifier  
- 4. Sample Category  
- 5. Brand Name  
- 6. Food Description  
- 7. Premises Name  
- 8. Premises Postcode  
- 9. Premises Type  
- 10. Sample Reason  
- 11. Sample Type  
- 12. Follow Up Required  
- 13. Follow Up Identifier  
- 14. Food Poisoning  
- 15. Food Poisoning Details  
- 16. Survey Identifier  
- 17. Product Type  
- 18. Manufacturer Name  
- 19. Distributor Name  
- 20. Importer Name  
- 21. Country of Origin  
- 22. Laboratory  
- 23. Laboratory Comments  
- 24. Determinand  
- 25. Result (Numeric)  
+ 1. [Local Authority](#local-authority)  
+ 2. [Sample Date](#sample-date)  
+ 3. [Sample Identifier](#sample-identifier)  
+ 4. [Sample Category](#sample-identifier)  
+ 5. [Brand Name](#brand-name)  
+ 6. [Food Description](#food-description)  
+ 7. [Premises Name](#premises-name)  
+ 8. [Premises Postcode](#premises-postcode)  
+ 9. [Premises Type](#premises-type)  
+ 10. [Sample Reason](#sample-reason)  
+ 11. [Sample Type](#sample-type)  
+ 12. [Follow Up Required](#follow-up-required)  
+ 13. [Follow Up Identifier](#follow-up-identifier)  
+ 14. [Food Poisoning](#food-poisoning)  
+ 15. [Food Poisoning Details](#food-poisoning-details)  
+ 16. [Survey Identifier](#survey-identifier)  
+ 17. [Product Type](#product-identifier)  
+ 18. [Manufacturer Name](#manufacturer-name)  
+ 19. [Distributor Name](#distributor-name)  
+ 20. [Importer Name](#importer-name)  
+ 21. [Country of Origin](#country-of-origin)  
+ 22. [Laboratory](#laboratory)  
+ 23. [Laboratory Comments](#laboratory-comments)  
+ 24. [Determinand](#determinand)  
+ 25. [Result (Numeric)](#result-(numeric))  
  26. Resut (Text)  
  27. Satisfactory  
  28. Reported Date  
@@ -65,7 +65,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary
 4|sample_category|Sample category reference|Text|No|Yes
 5|brand_name|Brand name|Text|No|No
 6|food_description|**REVIEW** Free text food description|Text|Yes|No
-7|premises_name|Name of the premises where the sample was taken|Text|No|No
+7|premises_name|**DEFINE** Name of the premises where the sample was taken|Text|No|No
 8|premises_postcode|Post code of the premises where the sample was taken|Text|No|No
 9|premises_type|Premises type reference|Text|No|Yes
 10|sample_reason|The reason for sampling|Text|No|Yes
@@ -93,7 +93,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary
 32|result_level_1|**REVIEW** Description of results at top level|Text|Yes|Yes
 33|result_level_2|**REVIEW** Description of results at next level|Text|Yes|Yes
 34|result_level_3|**REVIEW** Summary description of test result|Text|Yes|Yes
-35|determination|**REVIEW** Result of test, chemical found.|No|Yes|1
+35|determination|**REVIEW** Result of test, chemical found.|No|Yes|No
 
 ## Detailed Field Definitions
 
@@ -274,14 +274,50 @@ The acceptable values for this field are:
  - `Unsatisfactory` or `U`
  - `Borderline` or `B`  
 
-### 33. Reported Date
+### 28. Reported Date
 **Field Name:** `report_date`  
 **Data Type:** Date (YYYY-MM-DD)  
 **Optional:** No  
 **Comments:** The date the results were reported, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.  
 
-### 31. Prosecution
+### 29. Prosecution
 **Field Name:** `prosecution`  
 **Data Type:** Boolean (True/False)  
 **Optional:** No  
 **Comments:** Indicates whether the sample forms part of a prosecution. It is critical to get this field correct as it will make sure that those samples involved in prosecutions are not published.  
+
+### 30. Output
+**Field Name:** `output`  
+**Data Type:** Text (255 character limit)  
+**Optional:** Yes  
+**Comments:** This field requires a full definition.  
+
+### 31. Result Fail Code
+**Field Name:** `result_fail_code`  
+**Data Type:** Test (255 character limit)  
+**Optional:** Yes  
+**Comments:** This field requires a full definition.  
+
+### 32. Result Level 1
+**Field Name:** `result_level_1`  
+**Data Type:** Test (255 character limit)  
+**Optional:** Yes  
+**Comments:** This field requires a full definition.  
+
+### 31. Result Level 2
+**Field Name:** `result_level_2`  
+**Data Type:** Test (255 character limit)  
+**Optional:** Yes  
+**Comments:** This field requires a full definition.  
+
+### 31. Result Level 3
+**Field Name:** `result_level_3`  
+**Data Type:** Test (255 character limit)  
+**Optional:** Yes  
+**Comments:** This field requires a full definition.  
+
+### 31. Determination
+**Field Name:** `determination`  
+**Data Type:** Test (255 character limit)  
+**Optional:** Yes  
+**Comments:** This field requires a full definition.  
