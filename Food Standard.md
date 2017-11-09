@@ -40,15 +40,15 @@ This document is written for Local Authority and Laboratory users who need to su
  24. [Determinand](#24-determinand)  
  25. [Result (Numeric)](#25-result-numeric)  
  26. [Resut (Text)](#26-result-text)  
- 27. Satisfactory  
- 28. Reported Date  
- 29. Prosecution  
- 30. Output  
- 31. Result Fail Code  
- 32. Result Level 1  
- 33. Result Level 2  
- 34. Result Level 3  
- 35. Determination  
+ 27. [Satisfactory](#27-satisfactory)  
+ 28. [Reported Date](#28-reported-date)  
+ 29. [Prosecution](#29-prosecution)  
+ 30. [Output](#30-output)  
+ 31. [Result Fail Code](#31-result-fail-code)  
+ 32. [Result Level 1](#32-result-level-1)  
+ 33. [Result Level 2](#33-result-level-2)  
+ 34. [Result Level 3](#34-result-level-3)  
+ 35. [Determination](#35-determination)  
 - Additional Definitions
 - File Types
 - File Naming Conventions
