@@ -42,9 +42,9 @@ This document is written for Local Authority and Laboratory users who need to su
  26. [Reported Date](#26-reported-date)  
  27. [Prosecution](#27-prosecution)  
  28. [Result Fail Code](#28-result-fail-code)  
-- Supported File Types
-- Other Requirements
-- File Naming Conventions
+- [Supported File Types](#supported-file-types)
+- [Other Requirements](#other-requirements)
+- [File Naming Conventions](#file-naming-conventions)
 
 ## Food Standard Overview
 
