@@ -337,3 +337,13 @@ We expect to be able to support other formats (e.g. JSON or XML) in future, and 
 The majority of the fields in the standard are text, which needs to be treated carefully when stored in a CSV file. All text fields must be enclosed within double quotes `"this is the text"`. You should try to avoid using double quotes within a text field as this can cause the field to be misread, but the RFC4180 standard allows it if handled appropriately.
 
 >If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote. For example: `"aaa","b""bb","ccc"`
+
+### Encoding
+
+Where possible please use `UTF-8` encoding.
+
+## File Naming Conventions
+
+In order to make it easy for us to manage the files longer term, it will be important to name files so that we can tell who has submitted them and the time period that each file covers. The format will be the laboratory code from the laboratories register, a dash, the earliest sample date reported, a dash, and then the latest sample date reported, with both dates in `YYYYMMDD` format.
+
+For example, the file from the laboratory with code `LAB10` for sampling data from the 1st to the 31st of January 2017 would be named `LAB10-20170101-20170131.csv`.
