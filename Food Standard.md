@@ -334,5 +334,6 @@ We expect to be able to support other formats (e.g. JSON or XML) in future, and 
 
 ### Text Fields
 
-The majority of the fields in the standard are text, which needs to be treated carefully when stored in a CSV file. All text fields must be enclosed within double quotes `"this is the text"`. You should try to avoid using double quotes within a text field as this can cause the field to be misread, but the RFC4180 standard allows it if handled appropriately >If double-quotes are used to enclose fields, then a double-quote
-       appearing inside a field must be escaped by preceding it with another double quote. For example: `"aaa","b""bb","ccc"`
+The majority of the fields in the standard are text, which needs to be treated carefully when stored in a CSV file. All text fields must be enclosed within double quotes `"this is the text"`. You should try to avoid using double quotes within a text field as this can cause the field to be misread, but the RFC4180 standard allows it if handled appropriately.
+
+>If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote. For example: `"aaa","b""bb","ccc"`
