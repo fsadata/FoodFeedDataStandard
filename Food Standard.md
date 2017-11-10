@@ -310,6 +310,6 @@ Where possible please use `UTF-8` encoding.
 
 ## File Naming Conventions
 
-In order to make it easy for us to manage the files longer term, it will be important to name files so that we can tell who has submitted them and the time period that each file covers. The format will be the laboratory code from the laboratories register, a dash, the earliest sample date reported, a dash, and then the latest sample date reported, with both dates in `YYYYMMDD` format.
+In order to make it easy for us to manage the files longer term, it will be important to name files so that we can tell who has submitted them and the time period that each file covers. The format will be the laboratory code from the laboratories register, and the date of submission in `YYYYMMDD` format.
 
-For example, the file from the laboratory with code `LAB10` for sampling data from the 1st to the 31st of January 2017 would be named `LAB10-20170101-20170131.csv`.
+For example, the file from the laboratory with code `LAB10` for sampling data submitted the 31st of January 2017 would be named `LAB1020170131.csv`.
