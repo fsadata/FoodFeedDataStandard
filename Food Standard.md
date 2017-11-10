@@ -35,7 +35,7 @@ This document is written for Local Authority and Laboratory users who need to su
  19. [Country of Origin](#19-country-of-origin)  
  20. [Laboratory](#20-laboratory)  
  21. [Laboratory Comments](#21-laboratory-comments)  
- 22 [Determinand](#22-determinand)  
+ 22. [Determinand](#22-determinand)  
  23. [Result (Numeric)](#23-result-numeric)  
  24. [Resut (Text)](#24-result-text)  
  25. [Satisfactory](#25-satisfactory)  
