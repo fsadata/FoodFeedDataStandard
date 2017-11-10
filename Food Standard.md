@@ -12,8 +12,8 @@ This document is written for Local Authority and Laboratory users who need to su
 
 ### How This Document Is Structured
 
-- [Food Standard Overview](#food-standard-overview)
-- [Detailed Field Definitions](#detailed-field-definitions)
+- [Food Standard Overview](#food-standard-overview) Contains a brief overview of all the fields in the standard.  
+- [Field Definitions](#field-definitions) Complete definitions for each field in the standard, includes constraints and specific data type formatting requirements.  
  1. [Local Authority](#1-local-authority)  
  2. [Sample Date](#2-sample-date)  
  3. [Sample Identifier](#3-sample-identifier)  
@@ -49,8 +49,8 @@ This document is written for Local Authority and Laboratory users who need to su
  33. [Result Level 2](#33-result-level-2)  
  34. [Result Level 3](#34-result-level-3)  
  35. [Determination](#35-determination)  
-- Additional Definitions
-- File Types
+- Supported File Types
+- Other Requirements
 - File Naming Conventions
 
 ## Food Standard Overview
@@ -95,7 +95,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary
 34|result_level_3|**REVIEW** Summary description of test result|Text|Yes|Yes
 35|determination|**REVIEW** Result of test, chemical found.|No|Yes|No
 
-## Detailed Field Definitions
+## Field Definitions
 
 ### Local Authority
 **Field Name:** `local_authority`  
@@ -321,3 +321,18 @@ The acceptable values for this field are:
 **Data Type:** Test (255 character limit)  
 **Optional:** Yes  
 **Comments:** This field requires a full definition.  
+
+## Supported File Types
+
+Currently we are only supporting the standard for comma separated values (CSV) files. We have chosen this format as it is open, widely supported and easy to understand. Our new process for submitting the data to the FSA means that using CSV we can do some validation on files as they are submitted.
+
+The [current standard for CSV](https://tools.ietf.org/html/rfc4180) gives a detailed explanation of the common format for CSV files. It's concise and clear and we recommend reading it.
+
+We expect to be able to support other formats (e.g. JSON or XML) in future, and are actively exploring it, but this would mean the sender would be responsible for validating their data against the standard.
+
+## Other Requirements
+
+### Text Fields
+
+The majority of the fields in the standard are text, which needs to be treated carefully when stored in a CSV file. All text fields must be enclosed within double quotes `"this is the text"`. You should try to avoid using double quotes within a text field as this can cause the field to be misread, but the RFC4180 standard allows it if handled appropriately >If double-quotes are used to enclose fields, then a double-quote
+       appearing inside a field must be escaped by preceding it with another double quote. For example: `"aaa","b""bb","ccc"`
