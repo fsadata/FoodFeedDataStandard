@@ -1,4 +1,4 @@
-# Food Sampling Data Standard (Proposed)
+# Food and Feed Sampling Data Standard (Proposed)
 
 ### What Is This Document?
 
