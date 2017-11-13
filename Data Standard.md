@@ -62,9 +62,9 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 8|premises_type|Premises type reference|Text|No|Yes|LA
 9|sample_reason|The reason for sampling|Text|No|Yes|LA
 10|sample_type|The type of sample|Text|No|Yes|LA
-11|follow_up|Follow up visit required|Boolean|No|Yes|LA
+11|follow_up|Follow up visit required|Boolean|No|No|LA
 12|follow_up_id|Original sample unique identifier|Number|Yes|No|LA
-13|food_poisoning|Food poisoning result|Text|No|Yes|LA
+13|food_poisoning|Food poisoning result|Text|No|No|LA
 14|food_poisoning_details|Test details of food poisoning|Text|Yes|No|LA
 15|survey_id|Survey unique identifier|Number|Yes|No|LA
 16|manufacturer|Name of the manufacturer|Text|Yes|No|LA
