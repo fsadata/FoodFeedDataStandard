@@ -4,4 +4,4 @@ This repository contains the documentation describing the data standard which sh
 
 It currently only describes the data standards, rather than the mechanism for submitting data to the Food Standards Agency.
 
- - [Food Standard](https://github.com/adamlocker/FoodFeedDataStandard/blob/master/Food%20Standard.md)
+ - [Food Standard](https://github.com/fsadata/FoodFeedDataStandard/blob/master/Data%20Standard.md)
