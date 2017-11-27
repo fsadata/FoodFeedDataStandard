@@ -15,7 +15,7 @@ This document is written for Local Authority and Laboratory users who need to su
 - [Food Standard Overview](#food-standard-overview) Contains a brief overview of all the fields in the standard.  
 - [Field Definitions](#field-definitions) Complete definitions for each field in the standard, includes constraints and specific data type formatting requirements.  
  1. [Local Authority](#1-local-authority)  
- 2. [Sample Date](#2-sample-date)  
+ 2. [Sample Date Time](#2-sample-date-time)  
  3. [Sample Identifier](#3-sample-identifier)  
  4. [Sample Category](#4-sample-identifier)  
  5. [Food Description](#5-food-description)  
@@ -53,7 +53,7 @@ The following table lists the fields (name and description), their data types, w
 Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary | Source
 ------|------------|-------------|-----------|----------|-----------------------|-------
 1|local_authority|Local Authority identifier|Text|No|Yes|LA
-2|sample_date|Date sample taken|Date|No|No|LA
+2|sample_date_time|Date and time sample taken|Date|No|No|LA
 3|sample_id|Sample unique identifier|Text|No|No|LA
 4|sample_category|Sample category reference|Text|No|Yes|LA
 5|food_description|Free text food description|Text|Yes|No|LA
@@ -90,12 +90,12 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Source:** Local Authority  
 **Comments:** This is the three character Local Authority code as listed in the Government Digital Service (GDS) register for [England](https://local-authority-eng.register.gov.uk/), [Northern Ireland](https://local-authority-nir.discovery.openregister.org/), and [Wales](https://principal-local-authority.register.gov.uk/) repsectively. It should be noted that the Northern Ireland register is currently only in discovery, but GDS have advised us that the three character code is unlikely to change.
 
-### 2. Sample Date
+### 2. Sample Date Time
 **Field Name:** `sample_date`  
-**Data Type:** Date (format: `YYYY-MM-DD`)  
+**Data Type:** Date (format: `YYYY-MM-DD hh:mm:ss`)  
 **Optional:** No  
 **Source:** Local Authority  
-**Comments:** The date the sample was taken, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.
+**Comments:** The date and time the sample was taken, this should follow the YYYY-MM-DD hh:mm:ss format as laid out in the International Standard ISO 8601.
 
 ### 3. Sample Identifier
 **Field Name:** `sample_id`  
