@@ -91,7 +91,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Comments:** This is the three character Local Authority code as listed in the Government Digital Service (GDS) register for [England](https://local-authority-eng.register.gov.uk/), [Northern Ireland](https://local-authority-nir.discovery.openregister.org/), and [Wales](https://principal-local-authority.register.gov.uk/) repsectively. It should be noted that the Northern Ireland register is currently only in discovery, but GDS have advised us that the three character code is unlikely to change.
 
 ### 2. Sample Date Time
-**Field Name:** `sample_date`  
+**Field Name:** `sample_date_time`  
 **Data Type:** Date (format: `YYYY-MM-DD hh:mm:ss`)  
 **Optional:** No  
 **Source:** Local Authority  
