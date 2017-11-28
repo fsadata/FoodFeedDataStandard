@@ -45,7 +45,7 @@ This document is written for Local Authority and Laboratory users who need to su
  29. [Prosecution](#29rosecution)  
  30. [Result Fail Code](#30esult-fail-code) 
  31. [Deviating Sample Comments](#31-deviating-sample-comments)
- 32. [lab-identifier](#32-lab-identifier)
+ 32. [lab Identifier](#32-lab-identifier)
 - [Supported File Types](#supported-file-types)
 - [Other Requirements](#other-requirements)
 - [File Naming Conventions](#file-naming-conventions)
