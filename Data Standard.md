@@ -18,7 +18,7 @@ This document is written for Local Authority and Laboratory users who need to su
  2. [Sample Date Time](#2-sample-date-time)  
  3. [Sample Identifier](#3-sample-identifier)  
  4. [Sample Category](#4-sample-identifier)  
- 5. [Food Description](#5-food-description)  
+ 5. [Sample of](#5-sample-of)  
  6. [Premises Name](#6-premises-name)  
  7. [Premises Postcode](#7-premises-postcode)  
  8. [Premises Type](#8-premises-type)  
@@ -26,22 +26,26 @@ This document is written for Local Authority and Laboratory users who need to su
  10. [Sample Type](#10-sample-type)  
  11. [Follow Up Required](#11-follow-up-required)  
  12. [Follow Up Identifier](#12-follow-up-identifier)  
- 13. [Food Poisoning](#13-food-poisoning)  
- 14. [Food Poisoning Details](14-#food-poisoning-details)  
+ 13. [Shelf Life Type](#13-shelf-life-type)  
+ 14. [Durability Datee](#14-durability-date)  
  15. [Survey Identifier](#15-survey-identifier)  
  16. [Manufacturer Name](#16-manufacturer-name)  
  17. [Distributor Name](#17-distributor-name)  
  18. [Importer Name](#18-importer-name)  
  19. [Country of Origin](#19-country-of-origin)  
- 20. [Laboratory](#20-laboratory)  
- 21. [Laboratory Comments](#21-laboratory-comments)  
- 22. [Determinand](#22-determinand)  
- 23. [Result (Numeric)](#23-result-numeric)  
- 24. [Resut (Text)](#24-result-text)  
- 25. [Satisfactory](#25-satisfactory)  
- 26. [Reported Date](#26-reported-date)  
- 27. [Prosecution](#27-prosecution)  
- 28. [Result Fail Code](#28-result-fail-code)  
+ 20. [Sampling Officer](#20-sampling-officer)  
+ 21. [LA Instructions](#21-la-instructions)  
+ 22. [Laboratory](#20-laboratory)  
+ 23. [Laboratory Comments](#23laboratory-comments)  
+ 24. [Determinand](#24determinand)  
+ 25. [Result (Numeric)](#25result-numeric)  
+ 26. [Resut (Text)](#26result-text)  
+ 27. [Satisfactory](#27satisfactory)  
+ 28. [Reported Date](#28eported-date)  
+ 29. [Prosecution](#29rosecution)  
+ 30. [Result Fail Code](#30esult-fail-code) 
+ 31. [Deviating Sample Comments](#31-deviating-sample-comments)
+ 32. [lab-identifier](#32-lab-identifier)
 - [Supported File Types](#supported-file-types)
 - [Other Requirements](#other-requirements)
 - [File Naming Conventions](#file-naming-conventions)
@@ -56,7 +60,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 2|sample_date_time|Date and time sample taken|Date|No|No|LA
 3|sample_id|Sample unique identifier|Text|No|No|LA
 4|sample_category|Sample category reference|Text|No|Yes|LA
-5|food_description|Free text food description|Text|Yes|No|LA
+5|sample_of|Free text food description|Text|Yes|No|LA
 6|premises_name|Name of the premises where the sample was taken|Text|No|No|LA
 7|premises_postcode|Post code of the premises where the sample was taken|Text|No|No|LA
 8|premises_type|Premises type reference|Text|No|Yes|LA
@@ -64,22 +68,26 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 10|sample_type|The type of sample|Text|No|Yes|LA
 11|follow_up|Follow up visit required|Boolean|No|No|LA
 12|follow_up_id|Original sample unique identifier|Number|Yes|No|LA
-13|food_poisoning|Food poisoning result|Text|No|No|LA
-14|food_poisoning_details|Test details of food poisoning|Text|Yes|No|LA
+13|shelf_life_type|Shelf life type reference|Text|No|Yes|LA
+14|durability_date|Durability date of the sample|Date|No|No|Lab
 15|survey_id|Survey unique identifier|Number|Yes|No|LA
 16|manufacturer|Name of the manufacturer|Text|Yes|No|LA
 17|distributor|Name of the distributor|Text|Yes|No|LA
 18|importer|Name of the importer|Text|Yes|No|LA
 19|country|Country of origin|Text|Yes|Yes|LA
-20|laboratory|Laboratory identifier|Text|No|Yes|Lab
-21|laboratory_comments|Examiner's opinion of the sample|Text|Yes|No|Lab
-22|determinand|Determinand identifier|Text|Yes|Yes|Lab
-23|result_numeric|Numerical value outcome of test|Number|No|No|Lab
-24|result_text|Text explanation of outcome of test|Text|Yes|No|Lab
-25|satisfactory|Shows if sample was satisfactory|Text|No|Yes|Lab
-26|reported_date|Date results were reported to the Local Authority|Date|No|No|Lab
-27|prosecution|Does the sample form part of a prosecution|Boolean|No|Yes|Lab
-28|result_fail_code|The result fail code|Text|Yes|No|Lab
+20|sampling_officer|Name of sampling officer|text|No|No|LA
+21|la_instructions|Addtional instructions from Local Authority|text|Yes|No|LA
+22|laboratory|Laboratory identifier|Text|No|Yes|Lab
+23|laboratory_comments|Autorisor's opinion of the sample|Text|Yes|No|Lab
+24|determinand|Determinand identifier|Text|Yes|Yes|Lab
+25|result_numeric|Numerical value outcome of test|Number|No|No|Lab
+26|result_text|Text explanation of outcome of test|Text|Yes|No|Lab
+27|satisfactory|Shows if sample was satisfactory|Text|No|Yes|Lab
+28|reported_date|Date results were reported to the Local Authority|Date|No|No|Lab
+29|prosecution|Does the sample form part of a prosecution|Boolean|No|Yes|Lab
+30|result_fail_code|The result fail code|Text|Yes|No|Lab
+31|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
+32|lab_identifier|Sample unique identifier|Text|No|No|Lab
 
 ## Field Definitions
 
@@ -112,7 +120,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Comments:** The [sampling taxonomy](http://data.food.gov.uk/codes/enforcement-monitoring/sampling) defines the acceptable values for this field. The sample taxonomy is a hierarchy of sampling classification with four levels. They are organised as `Clan > Family > Group > Type`. Each item in each level is numbered, these values are concatenated into a single string with a `.` used to separate them. Because they have a strict hierarchical relationship the classification only needs to be reported at the type level (format `00.00.00.00`), the group, family and clan do not need to be supplied.  
 
 ### 5. Food Description
-**Field Name:** `food_description`  
+**Field Name:** `sample_of`  
 **Data Type:** Text (255 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority  
@@ -158,7 +166,8 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Comments:** The acceptable values for this field are:
  - `Formal` or `F`
  - `Informal` or `I`
-
+ - `Compliant` or `C`
+ 
 ### 11. Follow Up
 **Field Name:** `follow_up`  
 **Data Type:** Boolean (True/False)  
@@ -173,19 +182,23 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Source:** Local Authority  
 **Comments:** The unique sample reference number for the original sample to which this is a follow up.
 
-### 13. Food Poisoning
-**Field Name:** `food_poisoning`  
-**Data Type:** Boolean (True/False)  
+### 13. Shelf life Type
+**Field Name:** `shelf_life_type`  
+**Data Type:** Text (controlled vocabulary)   
 **Optional:** No  
 **Source:** Local Authority  
-**Comments:** This field indicates whether or not this sample was taken as part of a food poisoning investigation.
-
-### 14. Food Poisoning Details
-**Field Name:** `food_poisoning_details`  
-**Data Type:** Text (255 character limit)  
-**Optional:** Yes  
-**Source:** Local Authority  
-**Comments:** The type of food poisoning outbreak being investigated as well as any additional pertinent information.
+**Comments:** Shelf life provided by the manufacturer/producer/FBO, The acceptable values for this field are:
+ - 'Use by'
+ - 'Best Before'
+ - 'Best Before End'
+ - 'Not Provided'
+ 
+### 14. Durability Date
+**Field Name:** `durability_date`  
+**Data Type:** Date (format: `YYYY-MM-DD`)  
+**Optional:** No  
+**Source:** Laboratory  
+**Comments:** The durability date of the sample, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.
 
 ### 15. Survey Identifier
 **Field Name:** `survey_id`  
@@ -222,42 +235,56 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Source:** Local Authority  
 **Comments:** The country of origin. The field `country` from the [GDS Country Register](https://country.register.gov.uk/records) must be used. This is a two character ISO 3166 alpha 2 code.  
 
-### 20. Laboratory
+### 20. Sampling Officer
+**Field Name:** `sampling_officer`  
+**Data Type:** Text (255 character limit)  
+**Optional:** No  
+**Source:** Local Authority  
+**Comments:** The name of the sampling officer.  
+
+### 21. LA Instructions
+**Field Name:** `la_instructions`  
+**Data Type:** Text (2000 character limit)  
+**Optional:** Yes  
+**Source:** Local Authority   
+**Comments:** This free text field shows any Local Authoritie's supplementary instructions.  
+
+### 22. Laboratory
 **Field Name:** `laboratory`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Source:** Laboratory  
 **Comments:** The name of the laboratory completing the testing on the sample. The notation for each lab will be published in due course. In the interim period a plain text name can be used.  
 
-### 21. Laboratory Comments
+### 23. Laboratory Comments
 **Field Name:** `lab_comments`  
 **Data Type:** Text (2000 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** This free text field shows the examiners opinion of the sample.  
 
-### 22. Determinand
+### 24. Determinand
 **Field Name:** `determinand`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** Describes the exact test completed on the sample. The [determinands taxonomy](www.data.food.gov.uk/codes) contains this information. It is heirarchical and has four levels. Only the most detailed level should be used. For example, the test for Tartrazine assessed on a miligrams per kilogram basis has the notation `CE102-05`.  
 
-### 23. Result (Numeric)
+### 25. Result (Numeric)
 **Field Name:** `result_numeric`  
 **Data Type:** Number (any numeric data type)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** The result of the test completed on the sample, where the result is numerical, e.g. `1.4`  
 
-### 24. Result (Text)
+### 26. Result (Text)
 **Field Name:** `result_text`  
 **Data Type:** Text (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** The result of the test completed on the sample, where the result cannot be expressed numerically, e.g. `<1.4` or `less than one`  
 
-### 25. Satisfactory
+### 27. Satisfactory
 **Field Name:** `satisfactory`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
@@ -266,35 +293,50 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
  - `Satisfactory` or `S`
  - `Unsatisfactory` or `U`
  - `Borderline` or `B`  
+ - `Potential injurious to health / unfit for human consumption` or `B` 
 
-### 26. Reported Date
+### 28. Reported Date
 **Field Name:** `report_date`  
 **Data Type:** Date (format: `YYYY-MM-DD`)  
 **Optional:** No  
 **Source:** Laboratory  
 **Comments:** The date the results were reported, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.  
 
-### 27. Prosecution
+### 29. Prosecution
 **Field Name:** `prosecution`  
 **Data Type:** Boolean (True/False)  
 **Optional:** No  
 **Source:** Laboratory  
 **Comments:** Indicates whether the sample forms part of a prosecution. It is critical to get this field correct as it will make sure that those samples involved in prosecutions are not published.  
 
-### 28. Result Fail Code
+### 30. Result Fail Code
 **Field Name:** `result_fail_code`  
 **Data Type:** Test (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** This field requires a full definition.  
 
+### 31. Deviating Sample Comments
+**Field Name:** `result_fail_code`  
+**Data Type:** Test (255 character limit)  
+**Optional:** Yes  
+**Source:** Laboratory  
+**Comments:** To record if the sample isn’t in line with the FLCoP or if temp control requirements not met..  
+
+### 32. Lab Identifier
+**Field Name:** `sample_id`  
+**Data Type:** Text (32 character limit)  
+**Optional:** No  
+**Source:** Local Authority  
+**Comments:** The sample number, as recorded by the sampling body. This must be a unique value within the records of that sampling body. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
+
 ## Supported File Types
 
-Currently we are only supporting the standard for comma separated values (CSV) files. We have chosen this format as it is open, widely supported and easy to understand. Our new process for submitting the data to the FSA means that using CSV we can do some validation on files as they are submitted.
+Currently we are supporting the standard for comma separated values (CSV), Json and XML files.
 
 The [current standard for CSV](https://tools.ietf.org/html/rfc4180) gives a detailed explanation of the common format for CSV files. It's concise and clear and we recommend reading it.
 
-We expect to be able to support other formats (e.g. JSON or XML) in future, and are actively exploring it, but this would mean the sender would be responsible for validating their data against the standard.
+We expect to be able to support other formats (e.g. JSON or XML), but this would mean the sender would be responsible for validating their data against the standard.
 
 ## Other Requirements
 
