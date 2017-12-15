@@ -27,7 +27,7 @@ This document is written for Local Authority and Laboratory users who need to su
  11. [Follow Up Required](#11-follow-up-required)  
  12. [Follow Up Identifier](#12-follow-up-identifier)  
  13. [Shelf Life Type](#13-shelf-life-type)  
- 14. [Durability Datee](#14-durability-date)  
+ 14. [Durability Date](#14-durability-date)  
  15. [Survey Identifier](#15-survey-identifier)  
  16. [Manufacturer Name](#16-manufacturer-name)  
  17. [Distributor Name](#17-distributor-name)  
