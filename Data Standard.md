@@ -69,7 +69,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 11|follow_up|Follow up visit required|Boolean|No|No|LA
 12|follow_up_id|Original sample unique identifier|Number|Yes|No|LA
 13|shelf_life_type|Shelf life type reference|Text|No|Yes|LA
-14|durability_date|Durability date of the sample|Date|No|No|Lab
+14|durability_date|Durability date of the sample|Date|No|No|LA
 15|survey_id|Survey unique identifier|Number|Yes|No|LA
 16|manufacturer|Name of the manufacturer|Text|Yes|No|LA
 17|distributor|Name of the distributor|Text|Yes|No|LA
@@ -77,7 +77,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 19|country|Country of origin|Text|Yes|Yes|LA
 20|sampling_officer|Name of sampling officer|text|No|No|LA
 21|la_instructions|Addtional instructions from Local Authority|text|Yes|No|LA
-22|laboratory|Laboratory identifier|Text|No|Yes|Lab
+22|laboratory|Laboratory identifier|Text|No|Yes|LA
 23|laboratory_comments|Autorisor's opinion of the sample|Text|Yes|No|Lab
 24|determinand|Determinand identifier|Text|Yes|Yes|Lab
 25|result_numeric|Numerical value outcome of test|Number|No|No|Lab
@@ -197,7 +197,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Field Name:** `durability_date`  
 **Data Type:** Date (format: `YYYY-MM-DD`)  
 **Optional:** No  
-**Source:** Laboratory  
+**Source:** Local Authority  
 **Comments:** The durability date of the sample, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.
 
 ### 15. Survey Identifier
@@ -247,14 +247,14 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Data Type:** Text (2000 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority   
-**Comments:** This free text field shows any Local Authoritie's supplementary instructions.  
+**Comments:** This free text field shows any Local Authority's supplementary instructions.  
 
 ### 22. Laboratory
 **Field Name:** `laboratory`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
-**Source:** Laboratory  
-**Comments:** The name of the laboratory completing the testing on the sample. The notation for each lab will be published in due course. In the interim period a plain text name can be used.  
+**Source:** Local Authority  
+**Comments:** The code representing the laboratory completing the testing on the sample. The notation for each lab can be found in the [approved laboratories register](http://data.food.gov.uk/codes/controlled-establishments/laboratories/_approved-laboratory).  
 
 ### 23. Laboratory Comments
 **Field Name:** `lab_comments`  
