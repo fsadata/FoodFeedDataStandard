@@ -83,9 +83,9 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 26|result_text|Text explanation of outcome of test|Text|Yes|No|Lab
 27|satisfactory|Shows if sample was satisfactory|Text|No|Yes|Lab
 28|reported_date|Date results were reported to the Local Authority|Date|No|No|Lab
-30|result_fail_code|The result fail code|Text|Yes|No|Lab
-31|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
-32|lab_identifier|Sample unique identifier|Text|No|No|Lab
+29|result_fail_code|The result fail code|Text|Yes|No|Lab
+30|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
+31|lab_identifier|Sample unique identifier|Text|No|No|Lab
 
 ## Field Definitions
 
