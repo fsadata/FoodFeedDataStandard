@@ -173,7 +173,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Comments:** The acceptable values for this field are:
  - `Formal` or `F`
  - `Informal` or `I`
- - `Compliant` or `C`
+ - `Complaint` or `C`
  
 ### 12. Follow Up Identifier
 **Field Name:** `follow_up_id`  
@@ -188,10 +188,10 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Optional:** No  
 **Source:** Local Authority  
 **Comments:** Shelf life provided by the manufacturer/producer/FBO, The acceptable values for this field are:
- - 'Use by'
- - 'Best Before'
- - 'Best Before End'
- - 'Not Provided'
+ - 'Use by' or 'UB'
+ - 'Best Before' or 'BB'
+ - 'Best Before End' or 'BBE'
+ - 'Not Provided' or 'NP'
  
 ### 14. Durability Date
 **Field Name:** `durability_date`  
