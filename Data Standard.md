@@ -38,13 +38,14 @@ This document is written for Local Authority and Laboratory users who need to su
  22. [Laboratory](#22-laboratory)  
  23. [Laboratory Comments](#23-laboratory-comments)  
  24. [Determinand](#24-determinand)  
- 25. [Result (Numeric)](#25-result-numeric)  
- 26. [Result (Text)](#26-result-text)  
- 27. [Satisfactory](#27-satisfactory)  
- 28. [Reported Date](#28-eported-date)   
- 29. [Result Fail Code](#29-result-fail-code) 
- 30. [Deviating Sample Comments](#30-deviating-sample-comments)
- 31. [Lab Identifier](#31-lab-identifier)
+ 25. [Units](#25-units)  
+ 26. [Result (Numeric)](#26-result-numeric)  
+ 27. [Result (Text)](#27-result-text)  
+ 28. [Satisfactory](#28-satisfactory)  
+ 29. [Reported Date](#29-eported-date)   
+ 30. [Result Fail Code](#30-result-fail-code) 
+ 31. [Deviating Sample Comments](#31-deviating-sample-comments)
+ 32. [Lab Identifier](#32-lab-identifier)
 - [Supported File Types](#supported-file-types)
 - [Other Requirements](#other-requirements)
 - [File Naming Conventions](#file-naming-conventions)
@@ -79,13 +80,14 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 22|laboratory|Laboratory identifier|Text|No|Yes|LA
 23|laboratory_comments|Autorisor's opinion of the sample|Text|Yes|No|Lab
 24|determinand|Determinand identifier|Text|Yes|Yes|Lab
-25|result_numeric|Numerical value outcome of test|Number|No|No|Lab
-26|result_text|Text explanation of outcome of test|Text|Yes|No|Lab
-27|satisfactory|Shows if sample was satisfactory|Text|No|Yes|Lab
-28|reported_date|Date results were reported to the Local Authority|Date|No|No|Lab
-29|result_fail_code|The result fail code|Text|Yes|No|Lab
-30|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
-31|lab_identifier|Sample unique identifier|Text|No|No|Lab
+25|units|Units used|Text|Yes|Yes|Lab
+26|result_numeric|Numerical value outcome of test|Number|No|No|Lab
+27|result_text|Text explanation of outcome of test|Text|Yes|No|Lab
+28|satisfactory|Shows if sample was satisfactory|Text|No|Yes|Lab
+29|reported_date|Date results were reported to the Local Authority|Date|No|No|Lab
+30|result_fail_code|The result fail code|Text|Yes|No|Lab
+31|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
+32|lab_identifier|Sample unique identifier|Text|No|No|Lab
 
 ## Field Definitions
 
@@ -270,21 +272,28 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Source:** Laboratory  
 **Comments:** Describes the exact test completed on the sample. The [determinands taxonomy](www.data.food.gov.uk/codes) contains this information. It is heirarchical and has four levels. Only the most detailed level should be used. For example, the test for Tartrazine assessed on a miligrams per kilogram basis has the notation `CE102-05`.  
 
-### 25. Result (Numeric)
+### 25. Units
+**Field Name:** `units`  
+**Data Type:** Text (controlled vocabulary)  
+**Optional:** Yes  
+**Source:** Laboratory  
+**Comments:** Describes the units usied in the results / test completed on the sample.   e.g. '%', 'g/100g', 'cfu per gram', 'mg/kg', 'g/100g' etc
+
+### 26. Result (Numeric)
 **Field Name:** `result_numeric`  
 **Data Type:** Number (any numeric data type)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** The result of the test completed on the sample, where the result is numerical, e.g. `1.4`  
 
-### 26. Result (Text)
+### 27. Result (Text)
 **Field Name:** `result_text`  
 **Data Type:** Text (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** The result of the test completed on the sample, where the result cannot be expressed numerically, e.g. `<1.4` or `less than one`  
 
-### 27. Satisfactory
+### 28. Satisfactory
 **Field Name:** `satisfactory`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
@@ -295,28 +304,28 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
  - `Borderline` or `B`  
  - `Potential injurious to health / unfit for human consumption` or `P` 
 
-### 28. Reported Date
+### 29. Reported Date
 **Field Name:** `report_date`  
 **Data Type:** Date (format: `YYYY-MM-DD`)  
 **Optional:** No  
 **Source:** Laboratory  
 **Comments:** The date the results were reported, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.  
 
-### 29. Result Fail Code
+### 30. Result Fail Code
 **Field Name:** `result_fail_code`  
 **Data Type:** Test (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** This field requires a full definition.  
 
-### 30. Deviating Sample Comments
+### 31. Deviating Sample Comments
 **Field Name:** `result_fail_code`  
 **Data Type:** Test (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** To record if the sample isn’t in line with the FLCoP or if temp control requirements not met..  
 
-### 31. Lab Identifier
+### 32. Lab Identifier
 **Field Name:** `sample_id`  
 **Data Type:** Text (32 character limit)  
 **Optional:** No  
