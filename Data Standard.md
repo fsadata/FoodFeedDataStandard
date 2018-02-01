@@ -277,7 +277,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** Yes  
 **Source:** Laboratory  
-**Comments:** Describes the units usied in the results / test completed on the sample.   e.g. '%', 'g/100g', 'cfu per gram', 'mg/kg', 'g/100g' etc
+**Comments:** Describes the units used in the results / test completed on the sample.   e.g. '%', 'g/100g', 'cfu per gram', 'mg/kg', 'g/100g' etc
 
 ### 26. Result (Numeric)
 **Field Name:** `result_numeric`  
