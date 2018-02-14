@@ -56,10 +56,10 @@
   <xs:element name="premises_type" type="xs:string"/>
   <xs:element name="sample_reason" type="xs:string"/>
   <xs:element name="sample_type" type="xs:string"/>
-  <xs:element name="follow_up_id" type="xs:integer"/>
+  <xs:element name="follow_up_id" type="xs:string"/>
   <xs:element name="shelf_life_type" type="xs:string"/>
   <xs:element name="durability_date" type="xs:date"/>
-  <xs:element name="survey_id" type="xs:integer"/>
+  <xs:element name="survey_id" type="xs:string"/>
   <xs:element name="manufacturer" type="xs:string"/>
   <xs:element name="distributor" type="xs:string"/>
   <xs:element name="importer" type="xs:string"/>
