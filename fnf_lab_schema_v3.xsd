@@ -76,5 +76,5 @@
   <xs:element name="reported_date" type="xs:date"/>
   <xs:element name="result_fail_code" type="xs:string"/>
   <xs:element name="deviating_sample_comments" type="xs:string"/>
-  <xs:element name="lab_identifier" type="xs:string"/>
+  <xs:element name="sample_no" type="xs:string"/>
 </xs:schema>
