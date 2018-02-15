@@ -330,7 +330,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Data Type:** Text (32 character limit)  
 **Optional:** No  
 **Source:** Local Authority  
-**Comments:** The sample number, as recorded by the sampling body. This must be a unique value within the records of that sampling body. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
+**Comments:** The sample number, as recorded by the lab. This must be a unique value within the records of that lab. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
 
 ## Supported File Types
 
