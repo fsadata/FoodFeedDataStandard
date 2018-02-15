@@ -326,7 +326,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Comments:** To record if the sample isn’t in line with the FLCoP or if temp control requirements not met..  
 
 ### 32. Lab Identifier
-**Field Name:** `sample_id`  
+**Field Name:** `sample_no`  
 **Data Type:** Text (32 character limit)  
 **Optional:** No  
 **Source:** Local Authority  
