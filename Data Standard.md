@@ -316,10 +316,10 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 **Data Type:** Test (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
-**Comments:** This field requires a full definition.  
+**Comments:** This is the outcome failcode for the test applied. This captures the judgement on the result by the approver.  
 
 ### 31. Deviating Sample Comments
-**Field Name:** `result_fail_code`  
+**Field Name:** `deviating_sample_comments`  
 **Data Type:** Test (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
