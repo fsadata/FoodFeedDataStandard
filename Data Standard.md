@@ -67,15 +67,15 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 9|premises_type|Premises type reference|Text|No|Yes|LA
 10|sample_reason|The reason for sampling|Text|No|Yes|LA
 11|sample_type|The type of sample|Text|No|Yes|LA
-12|follow_up_id|Original sample unique identifier|text|Yes|No|LA
+12|follow_up_id|Original sample unique identifier|Text|Yes|No|LA
 13|shelf_life_type|Shelf life type reference|Text|No|Yes|LA
 14|durability_date|Durability date of the sample|Date|No|No|LA
-15|survey_id|Survey unique identifier|text|Yes|No|LA
+15|survey_id|Survey unique identifier|Text|Yes|No|LA
 16|manufacturer|Name of the manufacturer|Text|Yes|No|LA
 17|distributor|Name of the distributor|Text|Yes|No|LA
 18|importer|Name of the importer|Text|Yes|No|LA
 19|country|Country of origin|Text|Yes|Yes|LA
-20|sampling_officer|Name of sampling officer|text|No|No|LA
+20|sampling_officer|Name of sampling officer|Text|No|No|LA
 21|la_instructions|Addtional instructions from Local Authority|text|Yes|No|LA
 22|laboratory|Laboratory identifier|Text|No|Yes|LA
 23|laboratory_comments|Autorisor's opinion of the sample|Text|Yes|No|Lab
