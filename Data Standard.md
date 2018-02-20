@@ -19,33 +19,34 @@ This document is written for Local Authority and Laboratory users who need to su
  3. [Sample Identifier](#3-sample-identifier)
  4. [Food or Feed](#4-food-or-feed)  
  5. [Sample Category](#5-sample-identifier)  
- 6. [Sample of](#6-sample-of)  
+ 6. [Sample of](#6-sample-of)   
  7. [Premises Name](#7-premises-name)  
  8. [Premises Postcode](#8-premises-postcode)  
  9. [Premises Type](#9-premises-type)  
  10. [Sample Reason](#10-sample-reason)  
  11. [Sample Type](#11-sample-type)  
- 12. [Follow Up Identifier](#12-follow-up-identifier)  
- 13. [Shelf Life Type](#13-shelf-life-type)  
- 14. [Durability Date](#14-durability-date)  
- 15. [Survey Identifier](#15-survey-identifier)  
- 16. [Manufacturer Name](#16-manufacturer-name)  
- 17. [Distributor Name](#17-distributor-name)  
- 18. [Importer Name](#18-importer-name)  
- 19. [Country of Origin](#19-country-of-origin)  
- 20. [Sampling Officer](#20-sampling-officer)  
- 21. [LA Instructions](#21-la-instructions)  
- 22. [Laboratory](#22-laboratory)  
- 23. [Laboratory Comments](#23-laboratory-comments)  
- 24. [Determinand](#24-determinand)  
- 25. [Units](#25-units)  
- 26. [Result (Numeric)](#26-result-numeric)  
- 27. [Result (Text)](#27-result-text)  
- 28. [Satisfactory](#28-satisfactory)  
- 29. [Reported Date](#29-eported-date)   
- 30. [Result Fail Code](#30-result-fail-code) 
- 31. [Deviating Sample Comments](#31-deviating-sample-comments)
- 32. [Lab Identifier](#32-lab-identifier)
+ 12. [Animal Feed Type](#12 animal-feed-type) 
+ 13. [Follow Up Identifier](#13-follow-up-identifier)  
+ 14. [Shelf Life Type](#14-shelf-life-type)  
+ 15. [Durability Date](#15-durability-date)  
+ 16. [Survey Identifier](#16-survey-identifier)  
+ 17. [Manufacturer Name](#17-manufacturer-name)  
+ 18. [Distributor Name](#18-distributor-name)  
+ 19. [Importer Name](#19-importer-name)  
+ 20. [Country of Origin](#20-country-of-origin)  
+ 21. [Sampling Officer](#21-sampling-officer)  
+ 22. [LA Instructions](#22-la-instructions)  
+ 23. [Laboratory](#23-laboratory)  
+ 24. [Laboratory Comments](#24-laboratory-comments)  
+ 25. [Determinand](#25-determinand)  
+ 26. [Units](#26-units)  
+ 27. [Result (Numeric)](#27-result-numeric)  
+ 28. [Result (Text)](#28-result-text)  
+ 29. [Satisfactory](#29-satisfactory)  
+ 30. [Reported Date](#30-eported-date)   
+ 31. [Result Fail Code](#31-result-fail-code) 
+ 32. [Deviating Sample Comments](#32-deviating-sample-comments)
+ 33. [Lab Identifier](#33-lab-identifier)
 - [Supported File Types](#supported-file-types)
 - [Other Requirements](#other-requirements)
 - [File Naming Conventions](#file-naming-conventions)
@@ -62,48 +63,46 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 4|food_or_feed|Food or Feed flag|Text|No|Yes|LA
 5|sample_category|Sample category reference|Text|No|Yes|LA
 6|sample_of|Free text food description|Text|Yes|No|LA
+6|sample_of|Free text food description|Text|Yes|No|LA
 7|premises_name|Name of the premises where the sample was taken|Text|No|No|LA
 8|premises_postcode|Post code of the premises where the sample was taken|Text|No|No|LA
 9|premises_type|Premises type reference|Text|No|Yes|LA
 10|sample_reason|The reason for sampling|Text|No|Yes|LA
 11|sample_type|The type of sample|Text|No|Yes|LA
-12|follow_up_id|Original sample unique identifier|Text|Yes|No|LA
-13|shelf_life_type|Shelf life type reference|Text|No|Yes|LA
-14|durability_date|Durability date of the sample|Date|No|No|LA
-15|survey_id|Survey unique identifier|Text|Yes|No|LA
-16|manufacturer|Name of the manufacturer|Text|Yes|No|LA
-17|distributor|Name of the distributor|Text|Yes|No|LA
-18|importer|Name of the importer|Text|Yes|No|LA
-19|country|Country of origin|Text|Yes|Yes|LA
-20|sampling_officer|Name of sampling officer|Text|No|No|LA
-21|la_instructions|Addtional instructions from Local Authority|text|Yes|No|LA
-22|laboratory|Laboratory identifier|Text|No|Yes|LA
-23|laboratory_comments|Autorisor's opinion of the sample|Text|Yes|No|Lab
-24|determinand|Determinand identifier|Text|Yes|Yes|Lab
-25|units|Units used|Text|Yes|Yes|Lab
-26|result_numeric|Numerical value outcome of test|Number|No|No|Lab
-27|result_text|Text explanation of outcome of test|Text|Yes|No|Lab
-28|satisfactory|Shows if sample was satisfactory|Text|No|Yes|Lab
-29|reported_date|Date results were reported to the Local Authority|Date|No|No|Lab
-30|result_fail_code|The result fail code|Text|Yes|No|Lab
-31|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
-32|lab_identifier|Sample unique identifier|Text|No|No|Lab
+12|animal_feed_type|The type of feed|Text|Yes|Yes|LA
+13|follow_up_id|Original sample unique identifier|text|Yes|No|LA
+14|shelf_life_type|Shelf life type reference|Text|No|Yes|LA
+15|durability_date|Durability date of the sample|Date|No|No|LA
+16|survey_id|Survey unique identifier|text|Yes|No|LA
+17|manufacturer|Name of the manufacturer|Text|Yes|No|LA
+18|distributor|Name of the distributor|Text|Yes|No|LA
+19|importer|Name of the importer|Text|Yes|No|LA
+20|country|Country of origin|Text|Yes|Yes|LA
+21|sampling_officer|Name of sampling officer|text|No|No|LA
+22|la_instructions|Addtional instructions from Local Authority|text|Yes|No|LA
+23|laboratory|Laboratory identifier|Text|No|Yes|LA
+24|laboratory_comments|Autorisor's opinion of the sample|Text|Yes|No|Lab
+25|determinand|Determinand identifier|Text|Yes|Yes|Lab
+26|units|Units used|Text|Yes|Yes|Lab
+27|result_numeric|Numerical value outcome of test|Number|No|No|Lab
+28|result_text|Text explanation of outcome of test|Text|Yes|No|Lab
+29|satisfactory|Shows if sample was satisfactory|Text|No|Yes|Lab
+30|reported_date|Date results were reported to the Local Authority|Date|No|No|Lab
+31|result_fail_code|The result fail code|Text|Yes|No|Lab
+32|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
+33|lab_id|Sample unique identifier|Text|No|No|Lab
 
-## Field Definitions  
-
-The field definitions include the field names generated by the legacy system when creating XML files to help users map from legacy outputs to the new standards. Please note that whilst fields are broadly equivalent, where controlled vocabularies or taxonomies have been used, it should not be assumed that acceptable values remain identical to their legacy versions.
+## Field Definitions
 
 ### 1. Local Authority
 **Field Name:** `local_authority`  
-**Legacy XML Field Name:**  `LocalAuthorityCode`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Source:** Local Authority  
-**Comments:** This is the three character Local Authority code as listed in the Government Digital Service (GDS) register for [England](https://local-authority-eng.register.gov.uk/), [Northern Ireland](https://local-authority-nir.register.gov.uk/), and [Wales](https://principal-local-authority.register.gov.uk/) repsectively. It should be noted that the Northern Ireland register is currently only in discovery, but GDS have advised us that the three character code is unlikely to change.
+**Comments:** This is the three character Local Authority code as listed in the Government Digital Service (GDS) register for [England](https://local-authority-eng.register.gov.uk/), [Northern Ireland](https://local-authority-nir.discovery.openregister.org/), and [Wales](https://principal-local-authority.register.gov.uk/) repsectively. It should be noted that the Northern Ireland register is currently only in discovery, but GDS have advised us that the three character code is unlikely to change.
 
 ### 2. Sample Date Time
 **Field Name:** `sample_date_time`  
-**Legacy XML Field Name:** `DateSampleTaken`  
 **Data Type:** Date (format: `YYYY-MM-DD hh:mm:ss`)  
 **Optional:** No  
 **Source:** Local Authority  
@@ -111,7 +110,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 3. Sample Identifier
 **Field Name:** `sample_id`  
-**Legacy XML Field Name:** `LocalAuthoritySampleNumber`  
 **Data Type:** Text (32 character limit)  
 **Optional:** No  
 **Source:** Local Authority  
@@ -119,7 +117,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 4. Food or Feed
 **Field Name:** `food_or_feed`  
-**Legacy XML Field Name:** _No equivalent field_  
 **Data Type:** Text (Between 0 and 10 characters) 
 **Optional:** No  
 **Source:** Local Authority  
@@ -129,7 +126,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 5. Sample Category
 **Field Name:** `sample_category`  
-**Legacy XML Field Name:** `SubCategory3Code`  
 **Data Type:** Text (controlled vocabulary, format: `00.00.00.00`)  
 **Optional:** No  
 **Source:** Local Authority  
@@ -137,7 +133,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 6. Food Description
 **Field Name:** `sample_of`  
-**Legacy XML Field Name:** `FoodDescription`  
 **Data Type:** Text (255 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority  
@@ -145,7 +140,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 7. Premises Name
 **Field Name:** `premises_name`  
-**Legacy XML Field Name:** `PremisesName`  
 **Data Type:** Text (50 character limit)  
 **Optional:** No  
 **Source:** Local Authority  
@@ -153,7 +147,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 8. Premises Postcode
 **Field Name:** `premises_postcode`  
-**Legacy XML Field Name:** `BusinessPostcode`  
 **Data Type:** Text (Between 5 and 8 characters)  
 **Optional:** No  
 **Source:** Local Authority  
@@ -161,7 +154,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 9. Premises Type
 **Field Name:** `premises_type`  
-**Legacy XML Field Name:** `PremisesTypeCode`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Source:** Local Authority  
@@ -169,7 +161,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 10. Sample Reason
 **Field Name:** `sample_reason`  
-**Legacy XML Field Name:** `ReasonForTakingSampleCode`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Source:** Local Authority  
@@ -181,7 +172,6 @@ The field definitions include the field names generated by the legacy system whe
 
 ### 11. Sample Type
 **Field Name:** `sample_type`  
-**Legacy XML Field Name:** `SampleTypeCode`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Source:** Local Authority  
@@ -190,17 +180,22 @@ The field definitions include the field names generated by the legacy system whe
  - `Informal` or `I`
  - `Complaint` or `C`
  
-### 12. Follow Up Identifier
+### 12. Animal Feed Type
+**Field Name:** `animal_feed_type`  
+**Data Type:** Text (controlled vocabulary)  
+**Optional:** Yes  
+**Source:** Local Authority  
+**Comments:** This is an Animal Feeds field and is the code for the animal species type of the feeding stuff.
+ 
+### 13. Follow Up Identifier
 **Field Name:** `follow_up_id`  
-**Legacy XML Field Name:** `FollowUpSampleReference`  
 **Data Type:** Text (32 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority  
 **Comments:** The unique sample reference number for the original sample to which this is a follow up.
 
-### 13. Shelf life Type
+### 14. Shelf life Type
 **Field Name:** `shelf_life_type`  
-**Legacy XML Field Name:** `DurabilityCode`  
 **Data Type:** Text (controlled vocabulary)   
 **Optional:** No  
 **Source:** Local Authority  
@@ -210,124 +205,106 @@ The field definitions include the field names generated by the legacy system whe
  - 'Best Before End' or 'BBE'
  - 'Not Provided' or 'NP'
  
-### 14. Durability Date
+### 15. Durability Date
 **Field Name:** `durability_date`  
-**Legacy XML Field Names:** `DurabilityYear` `DurabilityMonth` `DurabilityDay`  
 **Data Type:** Date (format: `YYYY-MM-DD`)  
 **Optional:** No  
 **Source:** Local Authority  
 **Comments:** The durability date of the sample, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.
 
-### 15. Survey Identifier
+### 16. Survey Identifier
 **Field Name:** `survey_id`  
-**Legacy XML Field Name:** `SurveyReference`  
 **Data Type:** Text (50 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority  
 **Comments:** A unique reference to identify the survey under which this sample was taken. An entry in the fields indicates that this sample was taken as part of a survey, a null entry indicates that it was not.  
 
-### 16. Manufacturer Name
+### 17. Manufacturer Name
 **Field Name:** `manufacturer`  
-**Legacy XML Field Name:** `ManufacturerDescription`  
 **Data Type:** Text (255 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority  
 **Comments:** The name of the manufacturer of the sampled product.  
 
-### 17. Distributor Name
+### 18. Distributor Name
 **Field Name:** `distributor`  
-**Legacy XML Field Name:** `DistributerDescription`  
 **Data Type:** Text (255 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority  
 **Comments:** The name of the distributor of the sampled product.  
 
-### 18. Importer Name
+### 19. Importer Name
 **Field Name:** `importer`  
-**Legacy XML Field Name:** `ImporterDescription`  
 **Data Type:** Text (255 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority  
 **Comments:** The name of the importer of the sampled product.  
 
-### 19. Country of Origin
+### 20. Country of Origin
 **Field Name:** `country`  
-**Legacy XML Field Name:** `CountryCode`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** Yes  
 **Source:** Local Authority  
 **Comments:** The country of origin. The field `country` from the [GDS Country Register](https://country.register.gov.uk/records) must be used. This is a two character ISO 3166 alpha 2 code.  
 
-### 20. Sampling Officer
+### 21. Sampling Officer
 **Field Name:** `sampling_officer`  
-**Legacy XML Field Name:** `SampleOfficerName`  
 **Data Type:** Text (255 character limit)  
 **Optional:** No  
 **Source:** Local Authority  
-**Comments:** The name of the sampling officer. **This field should always be null when data sent to the FSA, it is only in the schema to faciliate transfer of data to laboratories**  
+**Comments:** The name of the sampling officer.  
 
-### 21. LA Instructions
+### 22. LA Instructions
 **Field Name:** `la_instructions`  
-**Legacy XML Field Name:** `RoutineComments`  
 **Data Type:** Text (2000 character limit)  
 **Optional:** Yes  
 **Source:** Local Authority   
 **Comments:** This free text field shows any Local Authority's supplementary instructions.  
 
-### 22. Laboratory
+### 23. Laboratory
 **Field Name:** `laboratory`  
-**Legacy XML Field Name:** `TestingLaboratoryCode`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Source:** Local Authority  
-**Comments:** The code representing the laboratory completing the testing on the sample. The notation for each lab can be found in the [approved laboratories register](http://data.food.gov.uk/codes/controlled-establishments/laboratories/_approved-laboratory). **This field should be completed by Local Authorities as the expectation is that they know which laboratory they are sending the sample to.**
+**Comments:** The code representing the laboratory completing the testing on the sample. The notation for each lab can be found in the [approved laboratories register](http://data.food.gov.uk/codes/controlled-establishments/laboratories/_approved-laboratory).  
 
-### 23. Laboratory Comments
+### 24. Laboratory Comments
 **Field Name:** `lab_comments`  
-**Legacy XML Field Name:** `LaboratoryComments`
 **Data Type:** Text (2000 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** This free text field shows the authoriser's opinion of the sample.  
 
-### 24. Determinand
+### 25. Determinand
 **Field Name:** `determinand`  
-**Legacy XML Field Name:** `Determination`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** Yes  
 **Source:** Laboratory  
-**Comments:** Describes the exact test completed on the sample. The [determinands taxonomy](www.data.food.gov.uk/codes) contains this information. It is heirarchical and has four levels, there are three acceptable formats for this field. For example, for a test for Tartrazine we will accept either;
- - The short notation for the test only, i.e. `CE102`  
- - The short notation including the unit suffix, i.e. `CE102-08` for Tartrazine tested on a mg/L basis.  
- - The long name for the test, enclosed in square brackets, i.e. `[Tartrazine]`. This final format should be used only when there is no short notation available. When using this format you should only use the units field to describe the units.
+**Comments:** Describes the exact test completed on the sample. The [determinands taxonomy](www.data.food.gov.uk/codes) contains this information. It is heirarchical and has four levels. Only the most detailed level should be used. For example, the test for Tartrazine assessed on a miligrams per kilogram basis has the notation `CE102-05`.  
 
-### 25. Units
+### 26. Units
 **Field Name:** `units`  
-**Legacy XML Field Name:** `TestUnits`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** Describes the units used in the results / test completed on the sample.   e.g. '%', 'g/100g', 'cfu per gram', 'mg/kg', 'g/100g' etc.
 
-### 26. Result (Numeric)
+### 27. Result (Numeric)
 **Field Name:** `result_numeric`  
-**Legacy XML Field Name:** `Result`  
 **Data Type:** Number (any numeric data type)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** The result of the test completed on the sample, where the result is numerical, e.g. `1.4`  
 
-### 27. Result (Text)
+### 28. Result (Text)
 **Field Name:** `result_text`  
-**Legacy XML Field Name:** `TextResult`  
 **Data Type:** Text (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** The result of the test completed on the sample, where the result cannot be expressed numerically, e.g. `<1.4` or `less than one`  
 
-### 28. Satisfactory
+### 29. Satisfactory
 **Field Name:** `satisfactory`  
-**Legacy XML Field Name:** `IsSatisfactory`  
 **Data Type:** Text (controlled vocabulary)  
 **Optional:** No  
 **Source:** Laboratory  
@@ -337,36 +314,32 @@ The field definitions include the field names generated by the legacy system whe
  - `Borderline` or `B`  
  - `Potential injurious to health / unfit for human consumption` or `P` 
 
-### 29. Reported Date
+### 30. Reported Date
 **Field Name:** `report_date`  
-**Legacy XML Field Name:** `ResultTimeStamp`  
 **Data Type:** Date (format: `YYYY-MM-DD`)  
 **Optional:** No  
 **Source:** Laboratory  
 **Comments:** The date the results were reported, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.  
 
-### 30. Result Fail Code
+### 31. Result Fail Code
 **Field Name:** `result_fail_code`  
-**Legacy XML Field Name:** `FailCode`  
 **Data Type:** Test (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
 **Comments:** This is the outcome failcode for the test applied. This captures the judgement on the result by the approver.  
 
-### 31. Deviating Sample Comments
+### 32. Deviating Sample Comments
 **Field Name:** `deviating_sample_comments`  
-**Legacy XML Field Name:** _Awaiting confirmation of legacy field name_
 **Data Type:** Test (255 character limit)  
 **Optional:** Yes  
 **Source:** Laboratory  
-**Comments:** To record if the sample isn’t in line with the FLCoP or if temperature control requirements were not met.  
+**Comments:** To record if the sample isn’t in line with the FLCoP or if temp control requirements not met..  
 
-### 32. Lab Identifier
-**Field Name:** `sample_no`  
-**Legacy XML Field Name:** `LIMSSampleNumber`  
+### 33. Lab Identifier
+**Field Name:** `lab_id`  
 **Data Type:** Text (32 character limit)  
 **Optional:** No  
-**Source:** Local Authority  
+**Source:** Laboratory  
 **Comments:** The sample number, as recorded by the lab. This must be a unique value within the records of that lab. It can be any combination of numeric or alphanumeric characters as long as it is unique.  
 
 ## Supported File Types
