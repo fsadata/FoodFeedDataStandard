@@ -25,7 +25,7 @@ This document is written for Local Authority and Laboratory users who need to su
  9. [Premises Type](#9-premises-type)  
  10. [Sample Reason](#10-sample-reason)  
  11. [Sample Type](#11-sample-type)  
- 11. [Sample Type](#11-sample-type)  
+ 11. [Animal Feed_Type](#12-animal-feed-type)  
  12. [Animal Feed Type](#12 animal-feed-type)  
  13. [Follow Up Identifier](#13-follow-up-identifier)  
  14. [Shelf Life Type](#14-shelf-life-type)  
