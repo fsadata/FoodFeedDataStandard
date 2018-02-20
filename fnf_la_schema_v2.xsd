@@ -21,6 +21,7 @@
         <xs:element ref="premises_type"/>
         <xs:element ref="sample_reason"/>
         <xs:element ref="sample_type"/>
+        <xs:element ref="animal_feed_type"/>
         <xs:element ref="follow_up_id"/>
         <xs:element ref="shelf_life_type"/>
         <xs:element ref="durability_date"/>
@@ -46,6 +47,7 @@
   <xs:element name="premises_type" type="xs:string"/>
   <xs:element name="sample_reason" type="xs:string"/>
   <xs:element name="sample_type" type="xs:string"/>
+  <xs:element name="animal_feed_type" type="xs:string"/>
   <xs:element name="follow_up_id" type="xs:string"/>
   <xs:element name="shelf_life_type" type="xs:string"/>
   <xs:element name="durability_date" type="xs:date"/>
