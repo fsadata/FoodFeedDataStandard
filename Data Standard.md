@@ -72,7 +72,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 12|animal_feed_type|The type of feed|Text|Yes|Yes|LA
 13|follow_up_id|Original sample unique identifier|text|Yes|No|LA
 14|shelf_life_type|Shelf life type reference|Text|No|Yes|LA
-15|durability_date|Durability date of the sample|Date|No|No|LA
+15|durability_date|Durability date of the sample|Date|Yes|No|LA
 16|survey_id|Survey unique identifier|text|Yes|No|LA
 17|manufacturer|Name of the manufacturer|Text|Yes|No|LA
 18|distributor|Name of the distributor|Text|Yes|No|LA
@@ -208,7 +208,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 ### 15. Durability Date
 **Field Name:** `durability_date`  
 **Data Type:** Date (format: `YYYY-MM-DD`)  
-**Optional:** No  
+**Optional:** Yes  
 **Source:** Local Authority  
 **Comments:** The durability date of the sample, this should follow the YYYY-MM-DD format as laid out in the International Standard ISO 8601.
 
