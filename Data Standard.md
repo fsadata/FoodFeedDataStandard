@@ -70,10 +70,10 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 10|sample_reason|The reason for sampling|Text|No|Yes|LA
 11|sample_type|The type of sample|Text|No|Yes|LA
 12|animal_feed_type|The type of feed|Text|Yes|Yes|LA
-13|follow_up_id|Original sample unique identifier|text|Yes|No|LA
+13|follow_up_id|Original sample unique identifier|Text|Yes|No|LA
 14|shelf_life_type|Shelf life type reference|Text|No|Yes|LA
 15|durability_date|Durability date of the sample|Date|Yes|No|LA
-16|survey_id|Survey unique identifier|text|Yes|No|LA
+16|survey_id|Survey unique identifier|Text|Yes|No|LA
 17|manufacturer|Name of the manufacturer|Text|Yes|No|LA
 18|distributor|Name of the distributor|Text|Yes|No|LA
 19|importer|Name of the importer|Text|Yes|No|LA
