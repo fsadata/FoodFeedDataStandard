@@ -79,7 +79,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 19|importer|Name of the importer|Text|Yes|No|LA
 20|country|Country of origin|Text|Yes|Yes|LA
 21|sampling_officer|Name of sampling officer|text|No|No|LA
-22|la_instructions|Addtional instructions from Local Authority|text|Yes|No|LA
+22|la_instructions|Addtional instructions from Local Authority|Text|Yes|No|LA
 23|laboratory|Laboratory identifier|Text|No|Yes|LA
 24|laboratory_comments|Autorisor's opinion of the sample|Text|Yes|No|Lab
 25|determinand|Determinand identifier|Text|Yes|Yes|Lab
