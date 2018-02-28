@@ -30,7 +30,6 @@
         <xs:element ref="distributor"/>
         <xs:element ref="importer"/>
         <xs:element ref="country"/>
-        <xs:element ref="sampling_officer"/>
         <xs:element ref="la_instructions"/>
         <xs:element ref="laboratory"/>
         <xs:element ref="laboratory_comments"/>
@@ -66,13 +65,12 @@
   <xs:element name="distributor" type="xs:string"/>
   <xs:element name="importer" type="xs:string"/>
   <xs:element name="country" type="xs:string"/>
-  <xs:element name="sampling_officer" type="xs:string"/>
   <xs:element name="la_instructions" type="xs:string"/>
   <xs:element name="laboratory" type="xs:string"/>
   <xs:element name="laboratory_comments" type="xs:string"/>
   <xs:element name="determinand" type="xs:string"/>
   <xs:element name="units" type="xs:string"/>
-  <xs:element name="result_numeric" type="xs:integer"/>
+  <xs:element name="result_numeric" type="string"/>
   <xs:element name="result_text" type="xs:string"/>
   <xs:element name="satisfactory" type="xs:string"/>
   <xs:element name="reported_date" type="xs:date"/>
