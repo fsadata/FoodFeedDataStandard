@@ -62,7 +62,6 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 4|food_or_feed|Food or Feed flag|Text|No|Yes|LA
 5|sample_category|Sample category reference|Text|No|Yes|LA
 6|sample_of|Free text food description|Text|Yes|No|LA
-6|sample_of|Free text food description|Text|Yes|No|LA
 7|premises_name|Name of the premises where the sample was taken|Text|No|No|LA
 8|premises_postcode|Post code of the premises where the sample was taken|Text|No|No|LA
 9|premises_type|Premises type reference|Text|No|Yes|LA
