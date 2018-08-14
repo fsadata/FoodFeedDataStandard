@@ -46,7 +46,7 @@ This document is written for Local Authority and Laboratory users who need to su
  30. [Result Fail Code](#30-result-fail-code) 
  31. [Deviating Sample Comments](#31-deviating-sample-comments)
  32. [Lab Identifier](#32-lab-identifier)
- 33. [Business ID](#30-result-fail-code) 
+ 33. [Business ID](#10-result-fail-code) 
  34. [Food Pois](#30-result-fail-code) 
  35. [Details](#31-deviating-sample-comments)
  36. [Manufacturer](#32-lab-identifier)
