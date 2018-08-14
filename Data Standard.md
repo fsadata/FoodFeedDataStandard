@@ -98,6 +98,15 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 30|result_fail_code|The result fail code|Text|Yes|No|Lab
 31|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
 32|lab_id|Sample unique identifier|Text|No|No|Lab
+33|business_id|Autorisor's opinion of the sample|Text|Yes|No|Lab
+34|food_pois|Determinand identifier|Text|Yes|Yes|Lab
+35|details|Units used|Text|Yes|Yes|Lab
+36|manufacturer|Numerical value outcome of test|Text|No|No|Lab
+37|packaging|Text explanation of outcome of test|Text|Yes|No|Lab
+38|condition|Shows if sample was satisfactory|Text|No|Yes|Lab
+39|temperature|Date results were reported to the Local Authority|Date|No|No|Lab
+41|condition|The result fail code|Text|Yes|No|Lab
+42|samp_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
 
 ## Field Definitions
 
