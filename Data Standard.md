@@ -46,6 +46,7 @@ This document is written for Local Authority and Laboratory users who need to su
  30. [Result Fail Code](#30-result-fail-code) 
  31. [Deviating Sample Comments](#31-deviating-sample-comments)
  32. [Lab Identifier](#32-lab-identifier)
+ 32. [Lab Identifier](#32-lab-identifier)
 - [Supported File Types](#supported-file-types)
 - [Other Requirements](#other-requirements)
 - [File Naming Conventions](#file-naming-conventions)
