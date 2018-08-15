@@ -88,7 +88,7 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 20|country|Country of origin|Text|Yes|Yes|LA
 21|la_instructions|Addtional instructions from Local Authority|Text|Yes|No|LA
 22|laboratory|Laboratory identifier|Text|No|Yes|LA
-23|laboratory_comments|Autorisor's opinion of the sample|Text|Yes|No|Lab
+23|laboratory_comments|Authorisor's opinion of the sample|Text|Yes|No|Lab
 24|determinand|Determinand identifier|Text|Yes|Yes|Lab
 25|units|Units used|Text|Yes|Yes|Lab
 26|result_numeric|Numerical value outcome of test|Text|No|No|Lab
@@ -99,15 +99,15 @@ Index | Field Name | Description | Data Type | Optional | Controlled Vocabulary 
 31|deviating_sample_comments|If sample is in-line with FLCoP|Text|Yes|No|Lab
 32|lab_id|Sample unique identifier|Text|No|No|Lab
 33|business_id|unique id of the business|Text|Yes|No|LA
-34|food_pois|Food posioning case|Text|Yes|No|LA
-35|details|Food bourne illness details|Text|Yes|No|LA
+34|food_pois|Food poisoning case|Text|Yes|No|LA
+35|details|Food borne illness details|Text|Yes|No|LA
 36|manufacturer|Manufacturer details|Text|Yes|No|LA
-37|distributor|packaging details|Text|Yes|No|LA
-38|importer|importer details|Text|Yes|No|LA
-39|packaging|packaging code e.g. pre-packed|Text|No|Yes|LA
+37|distributor|Packaging details|Text|Yes|No|LA
+38|importer|Importer details|Text|Yes|No|LA
+39|packaging|Packaging code e.g. pre-packed|Text|No|Yes|LA
 40|condition|Food condition code e.g. Frozen|Text|No|No|LA
-41|temperature|food temperature|decimal|Yes|No|LA
-42|samp_comments|sample comments from Lab|Text|Yes|No|Lab
+41|temperature|Food temperature|decimal|Yes|No|LA
+42|samp_comments|Sample comments from EHO|Text|Yes|No|Lab
 
 ## Field Definitions
 
